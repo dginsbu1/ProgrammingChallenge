@@ -19,9 +19,16 @@ public class EmployeePay {
  		double avgPay = netPay/hrsWrkd;
  		//this prints all the inputted info
  		System.out.println("*******************************************************");
- 		System.out.printf("INPUT... %n%-20s%s %n%-20s%.2f %n%-20s%.2f %n%-20s%d %n%n", "Employee Id:", name, "Hours Worked:", hrsWrkd, "Wage Rate:", wage, "Deduction:", deduction);
+ 		System.out.printf("INPUT... %n%-20s%s %n", "Employee Id:", name);   
+ 		System.out.printf("%-20s%.2f %n", "Hours Worked:", hrsWrkd);
+ 		System.out.printf("%-20s%.2f %n", "Wage Rate:", wage);
+ 		System.out.printf("%-20s%d %n%n", "Deduction:", deduction);
+ 		
  		//this prints all the compued info
- 		System.out.printf("OUTPUT... %n%-20s%.2f %n%-20s%.2f %n%-20s%.2f %n%-20s%.2f", "Gross Pay:", grossPay, "Taxes:", tax, "Net pay:", netPay, "Average pay:", avgPay);
+ 		System.out.printf("OUTPUT... %n%-20s%.2f %n", "Gross Pay:", grossPay);
+ 		System.out.printf("%-20s%.2f %n", "Taxes:", tax); 
+ 		System.out.printf("%-20s%.2f %n", "Net pay:", netPay);
+ 		System.out.printf("%-20s%.2f %n", "Average pay:", avgPay);
  	}
  }
 
