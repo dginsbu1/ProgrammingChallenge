@@ -1,0 +1,12 @@
+0/10: Wrong package & directory (you left out "test"). 
+
+Error: Could not find TEST_CLASS /Users/avraham/class_code/1300/2017-11-1427964/DanielGinsburg/IntroToCompSci/homework/junit_testing/RefactoredSqrtApproximation/src/test/java/edu/yu/intro/junit_testing/sqrt/test/SqrtApproximationTest.java not found
+
+Your directory structure: SqrtApproximation_JUnit_HWK12/DanielGinsburg/IntroToCompSci/homework/junit_testing/RefactoredSqrtApproximation/src/main/java/edu/yu/intro/junit_testing/sqrt/RefactoredSqrtApproximation.java
+
+Daniel -- I realize that it seems petty given all your work, but 1) I have to be consistent as to how the "doesn't compile -> automatic 0" rule is applied, and 2) The package requirement were explicit.
+
+"
+#### Your Tests
+
+* Your test class __must be named__ `edu.yu.intro.junit_testing.sqrt.test.SqrtApproximationTest`"
