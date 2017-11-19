@@ -129,6 +129,10 @@ public class EmployeePay{
 		}
  		//checks to see which department the employe belongs to
  		for(int i = 0; i < depList.length; i++){
+ 			//stop if run out of deps
+ 			if(depList[i] == null){
+ 				break;
+ 			}
 	    	if(depList[i].equals(employeeDep)){
 	    		depNum[i]++;
 	    		depGrossPay[i]+= grossPay;
@@ -142,6 +146,10 @@ public class EmployeePay{
 	  }
 	  System.out.printf("Department %11s Employees %25s %27s %n", "#", "Total Gross Pay", "Average Gross Pay");
 	  for(int i = 0; i < depList.length; i++){
+	  	//stop if run out of deps
+	  	if(depList[i] == null){
+ 				break;
+ 			}
 	  	System.out.printf("%s %26d %26.2f %26.2f %n", depList[i], depNum[i], depGrossPay[i], depGrossPay[i]/depNum[i]);
 	  }
     }

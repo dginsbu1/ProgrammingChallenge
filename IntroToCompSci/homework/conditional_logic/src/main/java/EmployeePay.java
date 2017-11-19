@@ -15,15 +15,15 @@ public class EmployeePay {
  		System.out.printf("%-20s%.2f %n", "Wage Rate:", wageRt);
  		System.out.printf("%-20s%d %n%n", "Deduction:", deduction);
 		//check for erors
-		if(hrsWrkd < 1.0 ){
+		if(hrsWrkd < 1.0){
 			System.out.println("The hours worked was less than 1.0. You don't work enough.");
 			java.lang.System.exit(0);
 		}
-		if(wageRt < 15  ){
+		if(wageRt < 15){
 			System.out.println("Your wage rate is less than 15. You don't get paid enough.");
 			java.lang.System.exit(0);
 		}
-		if(deduction <= 0 || deduction >= 35 ){
+		if(deduction <= 0 || deduction >= 35){
 			System.out.println("Sorry, your deduction needs to be 1-34 inclusive");
 			java.lang.System.exit(0);
 		}
