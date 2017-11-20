@@ -1,0 +1,15 @@
+10/10
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running edu.yu.intro.methods.quizgenerator.test.QuizGeneratorTest
+Invoking 'createQuiz()'
+Filling in my answers
+Invoking 'gradeQuiz()'
+Testing results of gradeQuiz(): first answer is wrong, others are correct
+running the test
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
