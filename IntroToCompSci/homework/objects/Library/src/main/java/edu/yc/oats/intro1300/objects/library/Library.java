@@ -13,7 +13,6 @@ public class Library{
 		System.out.println(library.checkBook(secondBook));
 		library.addBook(secondBook);
 		System.out.println(library.checkBook(secondBook));
-		}
 	}
 
 
