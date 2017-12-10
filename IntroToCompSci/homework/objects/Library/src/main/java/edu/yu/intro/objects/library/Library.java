@@ -12,6 +12,7 @@ public class Library
 
 	
 	public static void main(String[] args){
+		/*
 		System.out.println(Book.validISBN(0000000L));
 		System.out.println(Book.validISBN(0000000000001L));
 		System.out.println(Book.validISBN(1000000000000L));
@@ -25,7 +26,7 @@ public class Library
 		//library.addBook(firstBook);
 		//System.out.println(library.checkBook(secondBook));
 		library.addBook(secondBook);
-		////System.out.println(library.checkBook(secondBook));
+		////System.out.println(library.checkBook(secondBook));*/
 	}
 	
 
