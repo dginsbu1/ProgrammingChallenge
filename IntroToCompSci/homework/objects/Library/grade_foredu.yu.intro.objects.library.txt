@@ -1,0 +1,66 @@
+0/10 didn't compile
+
+Daniel -- you seem to have left main() in a state where it broke your compilation!
+
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Library 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Library ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/avraham/class_code/1300/2017-12-082617/DanielGinsburg/IntroToCompSci/homework/objects/Library/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Library ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 4 source files to /Users/avraham/class_code/1300/2017-12-082617/DanielGinsburg/IntroToCompSci/homework/objects/Library/target/classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+[INFO] 1 warning
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/avraham/class_code/1300/2017-12-082617/DanielGinsburg/IntroToCompSci/homework/objects/Library/src/main/java/edu/yu/intro/objects/library/Library.java:[21,77] incompatible types: int cannot be converted to java.lang.Long
+[ERROR] /Users/avraham/class_code/1300/2017-12-082617/DanielGinsburg/IntroToCompSci/homework/objects/Library/src/main/java/edu/yu/intro/objects/library/Library.java:[22,78] incompatible types: int cannot be converted to java.lang.Long
+[ERROR] /Users/avraham/class_code/1300/2017-12-082617/DanielGinsburg/IntroToCompSci/homework/objects/Library/src/main/java/edu/yu/intro/objects/library/Library.java:[23,22] variable secondBook is already defined in method main(java.lang.String[])
+[ERROR] /Users/avraham/class_code/1300/2017-12-082617/DanielGinsburg/IntroToCompSci/homework/objects/Library/src/main/java/edu/yu/intro/objects/library/Library.java:[23,66] incompatible types: int cannot be converted to java.lang.Long
+[ERROR] /Users/avraham/class_code/1300/2017-12-082617/DanielGinsburg/IntroToCompSci/homework/objects/Library/src/main/java/edu/yu/intro/objects/library/Library.java:[24,35] constructor Library in class edu.yu.intro.objects.library.Library cannot be applied to given types;
+  required: java.lang.String,java.lang.String,java.lang.String
+  found: java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /Users/avraham/class_code/1300/2017-12-082617/DanielGinsburg/IntroToCompSci/homework/objects/Library/src/main/java/edu/yu/intro/objects/library/Library.java:[27,24] cannot find symbol
+  symbol:   method addBook(edu.yu.intro.objects.library.Book)
+  location: variable library of type edu.yu.intro.objects.library.Library
+[INFO] 6 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.883 s
+[INFO] Finished at: 2017-12-07T21:24:37-05:00
+[INFO] Final Memory: 14M/309M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project Library: Compilation failure: Compilation failure:
+[ERROR] /Users/avraham/class_code/1300/2017-12-082617/DanielGinsburg/IntroToCompSci/homework/objects/Library/src/main/java/edu/yu/intro/objects/library/Library.java:[21,77] incompatible types: int cannot be converted to java.lang.Long
+[ERROR] /Users/avraham/class_code/1300/2017-12-082617/DanielGinsburg/IntroToCompSci/homework/objects/Library/src/main/java/edu/yu/intro/objects/library/Library.java:[22,78] incompatible types: int cannot be converted to java.lang.Long
+[ERROR] /Users/avraham/class_code/1300/2017-12-082617/DanielGinsburg/IntroToCompSci/homework/objects/Library/src/main/java/edu/yu/intro/objects/library/Library.java:[23,22] variable secondBook is already defined in method main(java.lang.String[])
+[ERROR] /Users/avraham/class_code/1300/2017-12-082617/DanielGinsburg/IntroToCompSci/homework/objects/Library/src/main/java/edu/yu/intro/objects/library/Library.java:[23,66] incompatible types: int cannot be converted to java.lang.Long
+[ERROR] /Users/avraham/class_code/1300/2017-12-082617/DanielGinsburg/IntroToCompSci/homework/objects/Library/src/main/java/edu/yu/intro/objects/library/Library.java:[24,35] constructor Library in class edu.yu.intro.objects.library.Library cannot be applied to given types;
+[ERROR] required: java.lang.String,java.lang.String,java.lang.String
+[ERROR] found: java.lang.String
+[ERROR] reason: actual and formal argument lists differ in length
+[ERROR] /Users/avraham/class_code/1300/2017-12-082617/DanielGinsburg/IntroToCompSci/homework/objects/Library/src/main/java/edu/yu/intro/objects/library/Library.java:[27,24] cannot find symbol
+[ERROR] symbol:   method addBook(edu.yu.intro.objects.library.Book)
+[ERROR] location: variable library of type edu.yu.intro.objects.library.Library
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
