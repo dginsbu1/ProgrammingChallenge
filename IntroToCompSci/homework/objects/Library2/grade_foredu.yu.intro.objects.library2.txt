@@ -1,0 +1,133 @@
+9/10: DCIE minor
+
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Library 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Library2 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/avraham/class_code/1300/2017-12-144139/DanielGinsburg/IntroToCompSci/homework/objects/Library2/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Library2 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 5 source files to /Users/avraham/class_code/1300/2017-12-144139/DanielGinsburg/IntroToCompSci/homework/objects/Library2/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Library2 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/avraham/class_code/1300/2017-12-144139/DanielGinsburg/IntroToCompSci/homework/objects/Library2/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Library2 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 6 source files to /Users/avraham/class_code/1300/2017-12-144139/DanielGinsburg/IntroToCompSci/homework/objects/Library2/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ Library2 ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Test cases to execute : 4
+Running edu.yu.intro.objects.library2.test.TestBook
+Execution Started : testNotEqual
+Execution Finished : testNotEqual
+Execution Started : testEqualHashcodes
+Execution Finished : testEqualHashcodes
+Execution Started : testBadTitle
+Execution Finished : testBadTitle
+Execution Started : testBadBookType
+Execution Finished : testBadBookType
+Execution Started : testBadIsbn
+Execution Finished : testBadIsbn
+Execution Started : testBadAuthor
+Execution Finished : testBadAuthor
+Execution Started : testVanillaCtor
+Created Title: The Riddle-Master of Hed Author: Patricia A. McKillip ISBN: 9780689305450 Type: hardcover
+Execution Finished : testVanillaCtor
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 sec - in edu.yu.intro.objects.library2.test.TestBook
+Running edu.yu.intro.objects.library2.test.TestLibrary
+Execution Started : testNotEqual
+Execution Finished : testNotEqual
+Execution Started : queryByISBNMustBeValid
+Execution Finished : queryByISBNMustBeValid
+Execution Started : testEqualHashcodes
+Execution Finished : testEqualHashcodes
+Execution Started : testBadPhoneNumber
+Execution Finished : testBadPhoneNumber
+Execution Started : runDriver
+Execution Finished : runDriver
+Execution Started : addedBooksScenario
+Execution Finished : addedBooksScenario
+Execution Started : testBadName
+Execution Finished : testBadName
+Execution Started : queryByISBNMustBePositive
+Execution Finished : queryByISBNMustBePositive
+Execution Started : queryByTitleMustNotBeNull
+Execution Finished : queryByTitleMustNotBeNull
+Execution Started : multipleCopiesOfBooksAllowed
+Execution Finished : multipleCopiesOfBooksAllowed
+Execution Started : testBadAddress
+Execution Finished : testBadAddress
+Execution Started : queryByTitleMustNotBeEmpty
+Execution Finished : queryByTitleMustNotBeEmpty
+Execution Started : newLibraryScenario
+Execution Finished : newLibraryScenario
+Execution Started : testVanillaCtor
+Created Name: Finkelstein Memorial Library Central Library Address: 24 W Rte 59, Spring Valley, NY 10977 Phone Number: (845) 352-5700
+Execution Finished : testVanillaCtor
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec - in edu.yu.intro.objects.library2.test.TestLibrary
+Running edu.yu.intro.objects.library2.test.TestPatron
+Execution Started : testBadFirstName
+Execution Finished : testBadFirstName
+Execution Started : testNotEqual
+Execution Finished : testNotEqual
+Execution Started : testBadLastName
+Execution Finished : testBadLastName
+Execution Started : testBadAddress
+Execution Finished : testBadAddress
+Execution Started : testVanillaCtor
+Created First Name: Jane Last Name: Ballisante Address: 14 South Ct New York, NY 10010 ID: 42a94581-1f55-4623-a457-345a2ca05bdc
+Execution Finished : testVanillaCtor
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in edu.yu.intro.objects.library2.test.TestPatron
+Running edu.yu.intro.objects.library2.test.TestPatrons
+Execution Started : NullLastNamePrefixIsInvalid
+Execution Finished : NullLastNamePrefixIsInvalid
+Execution Started : testLifecycle
+Execution Finished : testLifecycle
+Execution Started : getByUUIDMustBeNonNull
+Execution Finished : getByUUIDMustBeNonNull
+Execution Started : getByUUIDMustBeNonEmpty
+Execution Failure : java.lang.AssertionError: Expected exception: java.lang.RuntimeException
+Execution Finished : getByUUIDMustBeNonEmpty
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec <<< FAILURE! - in edu.yu.intro.objects.library2.test.TestPatrons
+getByUUIDMustBeNonEmpty(edu.yu.intro.objects.library2.test.TestPatrons)  Time elapsed: 0.006 sec  <<< FAILURE!
+java.lang.AssertionError: Expected exception: java.lang.RuntimeException
+
+Test cases executed : 30
+
+Results :
+
+Failed tests: 
+  TestPatrons.getByUUIDMustBeNonEmpty Expected exception: java.lang.RuntimeException
+
+Tests run: 30, Failures: 1, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.170 s
+[INFO] Finished at: 2017-12-13T20:02:47-05:00
+[INFO] Final Memory: 17M/303M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project Library2: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/avraham/class_code/1300/2017-12-144139/DanielGinsburg/IntroToCompSci/homework/objects/Library2/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
