@@ -57,11 +57,14 @@ public class Library
 	public ArrayList<Book> getAllBooks(){
 		return books;
 	}
+	public Set<Patron> getPatrons(){
+		return patrons;
+	}
 
 	//test both null, patron null or not member,
 	//book null or not in library 
 	public void borrow(Patron patron, Book book){
-		if(patron ==null || !patrons.contains(patron) || book == null){
+		if(patron == null || !patrons.contains(patron) || book == null || !books.contains(book)){
 				throw new IllegalArgumentException("Patron and Book must be instantiated");		
 		}
 		book.setPatron(patron);
@@ -84,11 +87,11 @@ public class Library
 		return bookCollection;
 	}
 	//test nullFilter, empty filter, no match, one match, multiple match 
-	public Collection search(BookFilter filter){
+	public Collection search(final BookFilter filter){
 		if(filter == null){
 			throw new IllegalArgumentException("Filter can't be null");			
 		}
-		Collection<Book> matches = new ArrayList<>();
+		List<Book> matches = new ArrayList<>();
 		for(Book book: books){
 			if(filter.filter(book)){
 				matches.add(book);
@@ -115,7 +118,7 @@ public class Library
 	//test, null, there, not there
 	public Patron get(String uuid){
 		if(uuid == null || uuid.equals("")){
-			throw new IllegalArgumentException("UUID can't be null.");
+			throw new IllegalArgumentException("UUID must be at least length one.");
 		}
 		for(Patron patron : patrons){
 			if(patron.getId().equals(uuid)){
@@ -138,6 +141,7 @@ public class Library
 			throw new IllegalArgumentException("Prefix can't be null.");
 		}
 		Set<Patron> matchingPatrons = new HashSet<>();
+		//if prefix is "" return all the patrons
 		if(prefix.equals("")){
 			for(Patron patron : patrons){
 				matchingPatrons.add(patron);
@@ -157,6 +161,7 @@ public class Library
 		return matchingPatrons;
 	}
 
+
 	//returns the amount of books in library
 	public int nBooks(){
 		return books.size();
@@ -169,56 +174,6 @@ public class Library
 		books.add(b);
 	}
 
-	//Is the specified book in the library's holdings
-	//test cases: null, yes, no
-	public boolean isTitleInHoldings(String title){
-		//add
-		if(title == null || title.length() == 0){
-			throw new IllegalArgumentException("Title must be at least length one");
-		}
-
-		for(Book b : books){
-			if(b.getTitle().equals(title)){
-				return true;
-			}
-		}
-			//if it doesn't match any title, it is not there
-			return false;
-	}
-
-	//Is the specified book in the library's holdings?
-	//test case: null, yes, no
-	public boolean isISBNInHoldings(long isbn13){
-		if(!Book.validISBN(isbn13)){
-			throw new IllegalArgumentException("ISBN must be 13 digits long");
-		}
-
-		for(Book b: books){
-			if(b.getISBN13() == isbn13){
-				return true;
-			}
-		}
-			//if it doesn't match any ISBN, it is not there
-			return false;
-	}
-
-	//Return null if the specified Book is not in 
-	//the holdings, the Book instance if it is.
-	//test case: null, there, not there
-	public Book getBook(long isbn13){
-		if(!Book.validISBN(isbn13)){
-			throw new IllegalArgumentException("ISBN must be 13 digits long");	
-		}
-		for(Book b : books){
-			if(b.getISBN13() == isbn13){
-				return b;
-			}
-		}
-		//if it doesn't match any ISBN, it is not there
-		return null;
-	}
-
-	
 	@Override
 	public int hashCode(){
 		return Objects.hash(name);
