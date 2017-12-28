@@ -94,7 +94,7 @@ public class Library
 		//check
 		Set<BookInstance> bookSet = new HashSet<>();
 			for(BookInstance book: bookInstances){
-				if(book.getPatron().equals(patron) && book.getLoanState().equals(LoanState.BORROWED)){
+				if(book.getLoanState().equals(LoanState.BORROWED) && book.getPatron().equals(patron)){
 					bookSet.add(book);
 			}
 		}
@@ -107,7 +107,7 @@ public class Library
 		}
 		Set<BookInstance> bookSet = new HashSet<>();
 			for(BookInstance book: bookInstances){
-				if(book.getPatron().equals(patron) && book.getLoanState().equals(LoanState.ON_RESERVE)){
+				if(book.getLoanState().equals(LoanState.ON_RESERVE) && book.getPatron().equals(patron)){
 					bookSet.add(book);
 			}
 		}

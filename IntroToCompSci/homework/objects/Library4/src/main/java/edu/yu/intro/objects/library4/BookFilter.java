@@ -1,4 +1,5 @@
 package edu.yu.intro.objects.library4;
+import java.util.*;
 
 public class BookFilter{
 	private String author, title, type;
@@ -32,6 +33,28 @@ public class BookFilter{
 		}
 		return false;
 	}
+	@Override
+	public int hashCode(){
+		return Objects.hash(author, title, type, isbn13);
+	}
+
+	@Override 
+	public boolean equals(Object that){
+		if(this == that){
+			return true;
+		}
+		if(that == null){
+			return false;
+		}
+		if(getClass() != that.getClass()){
+			return false;
+		}
+		BookFilter thatBookFilter = (BookFilter)(that);
+		return hashCode() == (thatBookFilter.hashCode());	
+	}
+
+
+
 	public static class Builder{
 		private String author, title, type;
 		private long isbn13;
@@ -80,7 +103,7 @@ public class BookFilter{
 		//test null, "", normal, (harcover, paperback, ebook)
 		public Builder setBookType(final String bookType){
 			//checks to make sure input is one of the three choices
-	        switch (bookType) {
+	        /*switch (bookType) {
 	            case "hardcover":  
 	            	this.type = "hardcover";
 	                break;
@@ -92,7 +115,8 @@ public class BookFilter{
 	                break;
 	            default:
 	            	throw new IllegalArgumentException("Book type must be hardcover, softcover, or ebook.");
-	         }
+	         }*/
+	         this.type = bookType;
 	         return this;
 		}
 
