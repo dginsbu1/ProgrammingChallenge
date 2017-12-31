@@ -1,0 +1,208 @@
+7/10: serious semantic errors but difficult assignment
+
+Results :
+
+Tests in error: 
+  TestBookInstance.testPatronBorrowsBook:89 » NullPointer
+  TestBookInstance.testPatronReservesBook:107 » NullPointer
+  TestBookInstance.testPatronReservesThenBorrowsBook:120 » NullPointer
+  TestBookInstance.testPatronReturnsBook:140 » NullPointer
+
+
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Library 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Library4 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/avraham/class_code/1300/2017-12-29570/DanielGinsburg/IntroToCompSci/homework/objects/Library4/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ Library4 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 9 source files to /Users/avraham/class_code/1300/2017-12-29570/DanielGinsburg/IntroToCompSci/homework/objects/Library4/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Library4 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/avraham/class_code/1300/2017-12-29570/DanielGinsburg/IntroToCompSci/homework/objects/Library4/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ Library4 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 8 source files to /Users/avraham/class_code/1300/2017-12-29570/DanielGinsburg/IntroToCompSci/homework/objects/Library4/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ Library4 ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Test cases to execute : 6
+Running edu.yu.intro.objects.library4.test.TestBook
+Execution Started : testNotEqual
+Execution Finished : testNotEqual
+Execution Started : testEqualHashcodes
+Execution Finished : testEqualHashcodes
+Execution Started : testBadTitle
+Execution Finished : testBadTitle
+Execution Started : testBadBookType
+Execution Finished : testBadBookType
+Execution Started : testBadIsbn
+Execution Finished : testBadIsbn
+Execution Started : testBadAuthor
+Execution Finished : testBadAuthor
+Execution Started : testVanillaCtor
+Created Title: The Riddle-Master of Hed Author: Patricia A. McKillip ISBN: 9780689305450 Type: hardcover
+Execution Finished : testVanillaCtor
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec - in edu.yu.intro.objects.library4.test.TestBook
+Running edu.yu.intro.objects.library4.test.TestBookCollection
+Execution Started : addedBooksScenario
+Execution Finished : addedBooksScenario
+Execution Started : patronBorrowsThenReturns
+Execution Finished : patronBorrowsThenReturns
+Execution Started : patronMustBeEnrolledInLibraryToReserve
+Execution Finished : patronMustBeEnrolledInLibraryToReserve
+Execution Started : patronReserve
+Execution Finished : patronReserve
+Execution Started : testBookInstances
+Execution Finished : testBookInstances
+Execution Started : isInHoldingsWorks
+Execution Finished : isInHoldingsWorks
+Execution Started : newLibraryScenario
+Execution Finished : newLibraryScenario
+Execution Started : patronMustBeEnrolledInLibraryToBorrow
+Execution Finished : patronMustBeEnrolledInLibraryToBorrow
+Execution Started : bookInstanceMustBeInLibraryHoldings
+Execution Finished : bookInstanceMustBeInLibraryHoldings
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec - in edu.yu.intro.objects.library4.test.TestBookCollection
+Running edu.yu.intro.objects.library4.test.TestBookFilter
+Execution Started : testMatchFailsOnWrongISBN
+Execution Finished : testMatchFailsOnWrongISBN
+Execution Started : testMatchOnBookType
+Execution Finished : testMatchOnBookType
+Execution Started : defaultFilterMatchesEveryBook
+Execution Finished : defaultFilterMatchesEveryBook
+Execution Started : testMatchOnAuthorAndOnISBN
+Execution Finished : testMatchOnAuthorAndOnISBN
+Execution Started : testMatchOnAuthor
+Execution Finished : testMatchOnAuthor
+Execution Started : testMatchFailsOnWrongBookType
+Execution Finished : testMatchFailsOnWrongBookType
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in edu.yu.intro.objects.library4.test.TestBookFilter
+Running edu.yu.intro.objects.library4.test.TestBookInstance
+Execution Started : borrowOnlyIfNotNullPatron
+Execution Finished : borrowOnlyIfNotNullPatron
+Execution Started : testPatronReservesBook
+Execution Failure : java.lang.NullPointerException
+Execution Finished : testPatronReservesBook
+Execution Started : testPatronBorrowsBook
+Execution Failure : java.lang.NullPointerException
+Execution Finished : testPatronBorrowsBook
+Execution Started : testNullBook
+Execution Finished : testNullBook
+Execution Started : differentInstancesAreNotEqualNorEqualHashcodes
+Execution Finished : differentInstancesAreNotEqualNorEqualHashcodes
+Execution Started : reserveOnlyIfNotNullPatron
+Execution Finished : reserveOnlyIfNotNullPatron
+Execution Started : testPatronReservesThenBorrowsBook
+Execution Failure : java.lang.NullPointerException
+Execution Finished : testPatronReservesThenBorrowsBook
+Execution Started : testPatronReturnsBook
+Execution Failure : java.lang.NullPointerException
+Execution Finished : testPatronReturnsBook
+Execution Started : testVanillaCtor
+Created Book: Title: Patricia A. McKillip Author: The Riddle-Master of Hed ISBN: 9780689305450 Type: hardcover ID: 3f45da61-afe3-4c3a-a0c8-d9f61639ec88
+Execution Finished : testVanillaCtor
+Tests run: 9, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.008 sec <<< FAILURE! - in edu.yu.intro.objects.library4.test.TestBookInstance
+testPatronReservesBook(edu.yu.intro.objects.library4.test.TestBookInstance)  Time elapsed: 0.003 sec  <<< ERROR!
+java.lang.NullPointerException
+	at edu.yu.intro.objects.library4.test.TestBookInstance.testPatronReservesBook(TestBookInstance.java:107)
+
+testPatronBorrowsBook(edu.yu.intro.objects.library4.test.TestBookInstance)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at edu.yu.intro.objects.library4.test.TestBookInstance.testPatronBorrowsBook(TestBookInstance.java:89)
+
+testPatronReservesThenBorrowsBook(edu.yu.intro.objects.library4.test.TestBookInstance)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at edu.yu.intro.objects.library4.test.TestBookInstance.testPatronReservesThenBorrowsBook(TestBookInstance.java:120)
+
+testPatronReturnsBook(edu.yu.intro.objects.library4.test.TestBookInstance)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at edu.yu.intro.objects.library4.test.TestBookInstance.testPatronReturnsBook(TestBookInstance.java:140)
+
+Running edu.yu.intro.objects.library4.test.TestLibrary
+Execution Started : testNotEqual
+Execution Finished : testNotEqual
+Execution Started : testNoBooksOnLoan
+Execution Finished : testNoBooksOnLoan
+Execution Started : testEqualHashcodes
+Execution Finished : testEqualHashcodes
+Execution Started : testBadPhoneNumber
+Execution Finished : testBadPhoneNumber
+Execution Started : patronMustBeMemberToQueryOnLoan
+Execution Finished : patronMustBeMemberToQueryOnLoan
+Execution Started : runDriver
+Execution Finished : runDriver
+Execution Started : testPatrons
+Execution Finished : testPatrons
+Execution Started : testBooksOnLoan
+Patron First Name: Jane Last Name: Ballisante Address: 14 South Ct New York, NY 10010 ID: 30484ab3-a7aa-4bd5-b686-65a3d38b2151 is borrowing Book: Title: The Hobbit Author: J. R. R. Tolkien ISBN: 9780547928227 Type: hardcover ID: f5869877-7088-4beb-b6fc-ea150610df23
+Patron First Name: Jane Last Name: Ballisante Address: 14 South Ct New York, NY 10010 ID: 30484ab3-a7aa-4bd5-b686-65a3d38b2151 is borrowing Book: Title: The Lord of the Rings: 50th Anniversary, One Vol. Edition Author: J. R. R. Tolkien ISBN: 9780618645619 Type: hardcover ID: 7ea45f09-c140-40e4-adb0-ce49c6913367
+Execution Finished : testBooksOnLoan
+Execution Started : testBadName
+Execution Finished : testBadName
+Execution Started : testBookInstances
+Execution Finished : testBookInstances
+Execution Started : testBadAddress
+Execution Finished : testBadAddress
+Execution Started : testVanillaCtor
+Created Name: Finkelstein Memorial Library Central Library Address: 24 W Rte 59, Spring Valley, NY 10977 Phone Number: (845) 352-5700
+Execution Finished : testVanillaCtor
+Execution Started : patronCannotBorrowTwice
+Execution Finished : patronCannotBorrowTwice
+Execution Started : twoPatronsCannotBorrowSameInstance
+Execution Finished : twoPatronsCannotBorrowSameInstance
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec - in edu.yu.intro.objects.library4.test.TestLibrary
+Running edu.yu.intro.objects.library4.test.TestPatron
+Execution Started : testBadFirstName
+Execution Finished : testBadFirstName
+Execution Started : testNotEqual
+Execution Finished : testNotEqual
+Execution Started : testBadLastName
+Execution Finished : testBadLastName
+Execution Started : testBadAddress
+Execution Finished : testBadAddress
+Execution Started : testVanillaCtor
+Created First Name: Jane Last Name: Ballisante Address: 14 South Ct New York, NY 10010 ID: db63cda7-0180-4dbd-8150-082134a86a7b
+Execution Finished : testVanillaCtor
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in edu.yu.intro.objects.library4.test.TestPatron
+Test cases executed : 50
+
+Results :
+
+Tests in error: 
+  TestBookInstance.testPatronBorrowsBook:89 » NullPointer
+  TestBookInstance.testPatronReservesBook:107 » NullPointer
+  TestBookInstance.testPatronReservesThenBorrowsBook:120 » NullPointer
+  TestBookInstance.testPatronReturnsBook:140 » NullPointer
+
+Tests run: 50, Failures: 0, Errors: 4, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.265 s
+[INFO] Finished at: 2017-12-28T20:15:21-05:00
+[INFO] Final Memory: 18M/305M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project Library4: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/avraham/class_code/1300/2017-12-29570/DanielGinsburg/IntroToCompSci/homework/objects/Library4/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
