@@ -1,0 +1,172 @@
+9/10 (wow!)
+
+I took off a bit only because we explicitly discussed in class the
+fact that the filter should not throw an exception if given bad input
+and that multiple books can be borrowed in library #3
+
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Library 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Library3 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/avraham/class_code/1300/2017-12-2223677/DanielGinsburg/IntroToCompSci/homework/objects/Library3/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ Library3 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 6 source files to /Users/avraham/class_code/1300/2017-12-2223677/DanielGinsburg/IntroToCompSci/homework/objects/Library3/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Library3 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/avraham/class_code/1300/2017-12-2223677/DanielGinsburg/IntroToCompSci/homework/objects/Library3/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ Library3 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 6 source files to /Users/avraham/class_code/1300/2017-12-2223677/DanielGinsburg/IntroToCompSci/homework/objects/Library3/target/test-classes
+[WARNING] /Users/avraham/class_code/1300/2017-12-2223677/DanielGinsburg/IntroToCompSci/homework/objects/Library3/src/test/java/edu/yu/intro/objects/test/library3/TestLibrary.java:[142,25] unchecked conversion
+  required: java.util.Collection<edu.yu.intro.objects.library3.Book>
+  found:    java.util.Collection
+[WARNING] /Users/avraham/class_code/1300/2017-12-2223677/DanielGinsburg/IntroToCompSci/homework/objects/Library3/src/test/java/edu/yu/intro/objects/test/library3/TestLibrary.java:[182,61] unchecked conversion
+  required: java.util.Collection<edu.yu.intro.objects.library3.Book>
+  found:    java.util.Collection
+[WARNING] /Users/avraham/class_code/1300/2017-12-2223677/DanielGinsburg/IntroToCompSci/homework/objects/Library3/src/test/java/edu/yu/intro/objects/test/library3/TestLibrary.java:[190,61] unchecked conversion
+  required: java.util.Collection<edu.yu.intro.objects.library3.Book>
+  found:    java.util.Collection
+[WARNING] /Users/avraham/class_code/1300/2017-12-2223677/DanielGinsburg/IntroToCompSci/homework/objects/Library3/src/test/java/edu/yu/intro/objects/test/library3/TestLibrary.java:[207,61] unchecked conversion
+  required: java.util.Collection<edu.yu.intro.objects.library3.Book>
+  found:    java.util.Collection
+[WARNING] /Users/avraham/class_code/1300/2017-12-2223677/DanielGinsburg/IntroToCompSci/homework/objects/Library3/src/test/java/edu/yu/intro/objects/test/library3/TestLibrary.java:[259,61] unchecked conversion
+  required: java.util.Collection<edu.yu.intro.objects.library3.Book>
+  found:    java.util.Collection
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ Library3 ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Test cases to execute : 4
+Running edu.yu.intro.objects.test.library3.TestBook
+Execution Started : testNotEqual
+Execution Finished : testNotEqual
+Execution Started : testEqualHashcodes
+Execution Finished : testEqualHashcodes
+Execution Started : testBadTitle
+Execution Finished : testBadTitle
+Execution Started : testBadBookType
+Execution Finished : testBadBookType
+Execution Started : testBadIsbn
+Execution Finished : testBadIsbn
+Execution Started : testBadAuthor
+Execution Finished : testBadAuthor
+Execution Started : testVanillaCtor
+Created Title: The Riddle-Master of Hed Author: Patricia A. McKillip ISBN: 9780689305450 Type: hardcover
+Execution Finished : testVanillaCtor
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 sec - in edu.yu.intro.objects.test.library3.TestBook
+Running edu.yu.intro.objects.test.library3.TestBookFilter
+Execution Started : testMatchFailsOnWrongISBN
+Execution Failure : java.lang.IllegalArgumentException: ISBN must be 13 digits long
+Execution Finished : testMatchFailsOnWrongISBN
+Execution Started : testMatchOnBookType
+Execution Finished : testMatchOnBookType
+Execution Started : defaultFilterMatchesEveryBook
+Execution Finished : defaultFilterMatchesEveryBook
+Execution Started : testMatchOnAuthorAndOnISBN
+Execution Finished : testMatchOnAuthorAndOnISBN
+Execution Started : testMatchOnAuthor
+Execution Finished : testMatchOnAuthor
+Execution Started : testMatchFailsOnWrongBookType
+Execution Finished : testMatchFailsOnWrongBookType
+Tests run: 6, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.001 sec <<< FAILURE! - in edu.yu.intro.objects.test.library3.TestBookFilter
+testMatchFailsOnWrongISBN(edu.yu.intro.objects.test.library3.TestBookFilter)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.IllegalArgumentException: ISBN must be 13 digits long
+	at edu.yu.intro.objects.test.library3.TestBookFilter.testMatchFailsOnWrongISBN(TestBookFilter.java:48)
+
+Running edu.yu.intro.objects.test.library3.TestLibrary
+Execution Started : testNotEqual
+Execution Finished : testNotEqual
+Execution Started : onLoanOnlyIfPatronIsMemberOfLibrary
+Execution Finished : onLoanOnlyIfPatronIsMemberOfLibrary
+Execution Started : testNoBooksOnLoan
+Execution Finished : testNoBooksOnLoan
+Execution Started : testEqualHashcodes
+Execution Finished : testEqualHashcodes
+Execution Started : testBadPhoneNumber
+Execution Finished : testBadPhoneNumber
+Execution Started : runDriver
+Execution Finished : runDriver
+Execution Started : addedBooksScenario
+Execution Finished : addedBooksScenario
+Execution Started : testPatrons
+Execution Finished : testPatrons
+Execution Started : testBooksOnLoan
+Patron First Name: Jane Last Name: Ballisante Address: 14 South Ct New York, NY 10010 ID: 29621e73-9d54-4038-98fe-a36075710231 is borrowing Title: The Hobbit Author: J. R. R. Tolkien ISBN: 9780547928227 Type: hardcover
+Patron First Name: Jane Last Name: Ballisante Address: 14 South Ct New York, NY 10010 ID: 29621e73-9d54-4038-98fe-a36075710231 is borrowing Title: The Lord of the Rings: 50th Anniversary, One Vol. Edition Author: J. R. R. Tolkien ISBN: 9780618645619 Type: hardcover
+Execution Finished : testBooksOnLoan
+Execution Started : testBadName
+Execution Finished : testBadName
+Execution Started : canBorrowBookOnlyIfAddedToLibrary
+Execution Finished : canBorrowBookOnlyIfAddedToLibrary
+Execution Started : canBorrowOnlyIfLibraryMember
+Execution Finished : canBorrowOnlyIfLibraryMember
+Execution Started : multipleCopiesOfBooksAllowed
+Execution Finished : multipleCopiesOfBooksAllowed
+Execution Started : testBadAddress
+Execution Finished : testBadAddress
+Execution Started : sameBookCanBeBorrowedMultipleTimes
+Execution Failure : java.lang.AssertionError: Patron1 has borrowed two books: [Title: The Hobbit Author: J. R. R. Tolkien ISBN: 9780547928227 Type: hardcover] expected:<2> but was:<1>
+Execution Finished : sameBookCanBeBorrowedMultipleTimes
+Execution Started : newLibraryScenario
+Execution Finished : newLibraryScenario
+Execution Started : testVanillaCtor
+Created Name: Finkelstein Memorial Library Central Library Address: 24 W Rte 59, Spring Valley, NY 10977 Phone Number: (845) 352-5700
+Execution Finished : testVanillaCtor
+Tests run: 17, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec <<< FAILURE! - in edu.yu.intro.objects.test.library3.TestLibrary
+sameBookCanBeBorrowedMultipleTimes(edu.yu.intro.objects.test.library3.TestLibrary)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: Patron1 has borrowed two books: [Title: The Hobbit Author: J. R. R. Tolkien ISBN: 9780547928227 Type: hardcover] expected:<2> but was:<1>
+	at edu.yu.intro.objects.test.library3.TestLibrary.sameBookCanBeBorrowedMultipleTimes(TestLibrary.java:260)
+
+Running edu.yu.intro.objects.test.library3.TestPatron
+Execution Started : testBadFirstName
+Execution Finished : testBadFirstName
+Execution Started : testNotEqual
+Execution Finished : testNotEqual
+Execution Started : testBadLastName
+Execution Finished : testBadLastName
+Execution Started : testBadAddress
+Execution Finished : testBadAddress
+Execution Started : testVanillaCtor
+Created First Name: Jane Last Name: Ballisante Address: 14 South Ct New York, NY 10010 ID: 75cf7c46-c088-40f4-90b0-2807924cbde0
+Execution Finished : testVanillaCtor
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in edu.yu.intro.objects.test.library3.TestPatron
+Test cases executed : 35
+
+Results :
+
+Failed tests: 
+  TestLibrary.sameBookCanBeBorrowedMultipleTimes:260 Patron1 has borrowed two books: [Title: The Hobbit Author: J. R. R. Tolkien ISBN: 9780547928227 Type: hardcover] expected:<2> but was:<1>
+Tests in error: 
+  TestBookFilter.testMatchFailsOnWrongISBN:48 » IllegalArgument ISBN must be 13 ...
+
+Tests run: 35, Failures: 1, Errors: 1, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.174 s
+[INFO] Finished at: 2017-12-21T20:03:35-05:00
+[INFO] Final Memory: 16M/214M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project Library3: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/avraham/class_code/1300/2017-12-2223677/DanielGinsburg/IntroToCompSci/homework/objects/Library3/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

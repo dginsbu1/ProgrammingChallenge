@@ -10,7 +10,7 @@ public class QuizGenerator{
 		giveQuiz(questions, userAns);
 		getQuizResults(questions, userAns);
 	}
-	//creates the quiz by calling on the AdditionQuesion class
+	//creates the quiz by calling on the AdditionQuesion/SubtractionQuestion class
 	public static void createQuiz(IntQuestion[] qs) {
 		qs[0] = new AdditionQuestion();
 		qs[1] = new SubtractionQuestion(); 
