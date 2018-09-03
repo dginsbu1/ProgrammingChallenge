@@ -1,3 +1,0 @@
-0/10 homework not submitted
-
-Error: Could not find TEST_CLASS /Users/avraham/class_code/1300/2017-11-1427964/DanielGinsburg/IntroToCompSci/homework/junit_testing/RefactoredSqrtApproximation/src/test/java/edu/yu/intro/junit_testing/sqrt/test/SqrtApproximationTest.java not found
