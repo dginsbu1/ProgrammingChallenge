@@ -6,6 +6,9 @@ public class Alphabet{
 	ArrayList<Character> alphabet;
 	//create new alphabet from chars in s
 	public Alphabet(String s){
+		if(s.length()==0){
+			throw new IllegalArgumentException("Alphabet must be at least one character");
+		}
 		R = s.length();
 		alphabet = new ArrayList<Character>(R);
 		for(int i =0; i < s.length(); i++){
@@ -62,9 +65,9 @@ public class Alphabet{
 		return s;
 	}
 
-	// public static void main(String args[]){
+	//public static void main(String args[]){
 	// 	Scanner scanner = new Scanner(System.in);
-	// 	Alphabet alphabet = new Alphabet("abcde");//ABCDE
+ 	//Alphabet alphabet = new Alphabet("");//ABCDE
 	// 	for(int i: alphabet.toIndices("aebdc")){
 	// 		System.out.print(i);
 	// 	}
@@ -81,5 +84,5 @@ public class Alphabet{
 	// 	//}
 	// 	//System.out.println(R+" "+c+" "+i+" "+yes+" "+no+
 	// 	//	" "+log+" ");
-	// }
+	//}
 }
