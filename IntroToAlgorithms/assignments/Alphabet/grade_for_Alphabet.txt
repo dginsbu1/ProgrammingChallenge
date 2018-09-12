@@ -1,0 +1,42 @@
+Daniel -- your test code broke the build.  At this point, am assigning
+a 0: you have until Friday @11am to fix so that I can run my test
+code.  If you fix this problem, I'll only take off 2 points and
+proceed to grade your assignment.
+
+It's your responsibility to send me an email asking me to pull your code again.
+
+Grade for assignment [DanielGinsburg]: 0/10
+building Student DanielGinsburg assignment code base from directory /Users/avraham/YUGitRepos/2545/DanielGinsburg/IntroToAlgorithms/assignments/Alphabet
+[ERROR] COMPILATION ERROR : 
+[ERROR] /Users/avraham/YUGitRepos/2545/DanielGinsburg/IntroToAlgorithms/assignments/Alphabet/src/test/java/edu/yu/introtoalgs/test/AlphabetTest.java:[34,63] cannot find symbol
+  symbol:   method toChars(int[])
+  location: variable alphabet of type edu.yu.introtoalgs.Alphabet
+[ERROR] /Users/avraham/YUGitRepos/2545/DanielGinsburg/IntroToAlgorithms/assignments/Alphabet/src/test/java/edu/yu/introtoalgs/test/AlphabetTest.java:[51,63] cannot find symbol
+  symbol:   method toChars(int[])
+  location: variable alphabet of type edu.yu.introtoalgs.Alphabet
+[ERROR] /Users/avraham/YUGitRepos/2545/DanielGinsburg/IntroToAlgorithms/assignments/Alphabet/src/test/java/edu/yu/introtoalgs/test/AlphabetTest.java:[67,54] cannot find symbol
+  symbol:   method toChars(int[])
+  location: variable alphabet of type edu.yu.introtoalgs.Alphabet
+[ERROR] /Users/avraham/YUGitRepos/2545/DanielGinsburg/IntroToAlgorithms/assignments/Alphabet/src/test/java/edu/yu/introtoalgs/test/AlphabetTest.java:[100,13] cannot find symbol
+  symbol:   method toChars(int[])
+  location: variable alphabet of type edu.yu.introtoalgs.Alphabet
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:testCompile (default-testCompile) on project Alphabet: Compilation failure: Compilation failure:
+[ERROR] /Users/avraham/YUGitRepos/2545/DanielGinsburg/IntroToAlgorithms/assignments/Alphabet/src/test/java/edu/yu/introtoalgs/test/AlphabetTest.java:[34,63] cannot find symbol
+[ERROR] symbol:   method toChars(int[])
+[ERROR] location: variable alphabet of type edu.yu.introtoalgs.Alphabet
+[ERROR] /Users/avraham/YUGitRepos/2545/DanielGinsburg/IntroToAlgorithms/assignments/Alphabet/src/test/java/edu/yu/introtoalgs/test/AlphabetTest.java:[51,63] cannot find symbol
+[ERROR] symbol:   method toChars(int[])
+[ERROR] location: variable alphabet of type edu.yu.introtoalgs.Alphabet
+[ERROR] /Users/avraham/YUGitRepos/2545/DanielGinsburg/IntroToAlgorithms/assignments/Alphabet/src/test/java/edu/yu/introtoalgs/test/AlphabetTest.java:[67,54] cannot find symbol
+[ERROR] symbol:   method toChars(int[])
+[ERROR] location: variable alphabet of type edu.yu.introtoalgs.Alphabet
+[ERROR] /Users/avraham/YUGitRepos/2545/DanielGinsburg/IntroToAlgorithms/assignments/Alphabet/src/test/java/edu/yu/introtoalgs/test/AlphabetTest.java:[100,13] cannot find symbol
+[ERROR] symbol:   method toChars(int[])
+[ERROR] location: variable alphabet of type edu.yu.introtoalgs.Alphabet
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
