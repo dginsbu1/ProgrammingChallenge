@@ -57,7 +57,7 @@ public class Alphabet{
 		return indices;
 	}
 	//convert base-R integer to string over this alphabet
-	public String toChar(int[] indices){
+	public String toChars(int[] indices){
 		String s = "";
 		for(int index: indices) {
 			s += this.toChar(index);
