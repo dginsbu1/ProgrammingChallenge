@@ -1,3 +1,5 @@
+take #1
+
 Daniel -- your test code broke the build.  At this point, am assigning
 a 0: you have until Friday @11am to fix so that I can run my test
 code.  If you fix this problem, I'll only take off 2 points and
@@ -33,10 +35,45 @@ building Student DanielGinsburg assignment code base from directory /Users/avrah
 [ERROR] /Users/avraham/YUGitRepos/2545/DanielGinsburg/IntroToAlgorithms/assignments/Alphabet/src/test/java/edu/yu/introtoalgs/test/AlphabetTest.java:[100,13] cannot find symbol
 [ERROR] symbol:   method toChars(int[])
 [ERROR] location: variable alphabet of type edu.yu.introtoalgs.Alphabet
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+take #2
+
+Per Daniel's comment that "I believe my mistake was that I left out
+the 's' in the method toChars(int[] indices).", confirmed that
+correct, problem was NOT in any of his test code, just the usual API
+problem.  Per policy for this first homework, regraded taking off 3
+points for initial problem.
+
+Grade for assignment [DanielGinsburg]: 7/10
+
+building Student DanielGinsburg assignment code base from directory /Users/avraham/YUGitRepos/2545/DanielGinsburg/IntroToAlgorithms/assignments/Alphabet
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Test cases to execute : 1
+Running edu.yu.introtoalgs.test.AlphabetTest
+Execution Started : toIndices_AllCharsMustBeInAlphabet
+Execution Finished : toIndices_AllCharsMustBeInAlphabet
+Execution Started : testUppercaseAndLowercase
+[INFO ] 2018-09-23 09:30:12.743 [main] AlphabetTest testUppercaseAndLowercase - Created Alphabet('Xx')
+Execution Finished : testUppercaseAndLowercase
+Execution Started : testDecimal
+[INFO ] 2018-09-23 09:30:12.748 [main] AlphabetTest testDecimal - Created Alphabet('0..9')
+Execution Finished : testDecimal
+Execution Started : toChars_AllIndicesMustBeInAlphabet
+Execution Finished : toChars_AllIndicesMustBeInAlphabet
+Execution Started : testBinary
+[INFO ] 2018-09-23 09:30:12.749 [main] AlphabetTest testBinary - Created Alphabet('01')
+Execution Finished : testBinary
+Execution Started : toIndex_CharMustBeInAlphabet
+Execution Finished : toIndex_CharMustBeInAlphabet
+Execution Started : toChar_IndexMustBeInAlphabet
+Execution Finished : toChar_IndexMustBeInAlphabet
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.481 sec - in edu.yu.introtoalgs.test.AlphabetTest
+Test cases executed : 7
+
+Results :
+
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0
+
