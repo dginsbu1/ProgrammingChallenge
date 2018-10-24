@@ -61,7 +61,9 @@ public class SortDriver{
 	// 		System.out.println(mis);
 	// 	}
 
-	// 	System.out.println();
+	// 	System.out.println(ca.equals(cb)+ " "+ cb.equals(ca));
+	// 	System.out.println(ca.compareTo(cb)+ " "+ cb.compareTo(ca));
+
 
 		
 

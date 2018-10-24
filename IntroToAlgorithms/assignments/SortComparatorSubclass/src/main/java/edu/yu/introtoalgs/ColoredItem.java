@@ -21,7 +21,7 @@ public class ColoredItem extends Item {
 		//old code 
 		// return this.color.toString().compareTo(that.color.toString());
 		if(that instanceof ColoredItem){
-			return this.color.toString().compareTo(((ColoredItem)(that)).color.toString());
+			return this.color.compareTo(((ColoredItem)(that)).getColor());
 		}
 		//if its a regular Item its smaller
 		return 1;
