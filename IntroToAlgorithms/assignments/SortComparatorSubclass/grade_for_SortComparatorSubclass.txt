@@ -1,0 +1,81 @@
+Grade for assignment [DanielGinsburg]: 10/10
+
+I gave full credit because your "assertion" seems to be the equivalent of throwing a RuntimeException
+
+building Student DanielGinsburg assignment code base from directory /Users/avraham/YUGitRepos/2545/DanielGinsburg/IntroToAlgorithms/assignments/SortComparatorSubclass
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Test cases to execute : 1
+Running edu.yu.introtoalgs.test.SortTest
+Execution Started : coloredItemImplementsEqualsAndHashcode
+Execution Finished : coloredItemImplementsEqualsAndHashcode
+Execution Started : cannotSortBaseAndSubclassInstances
+Execution Failure : java.lang.Exception: Unexpected exception, expected<java.lang.RuntimeException> but was<java.lang.AssertionError>
+Execution Finished : cannotSortBaseAndSubclassInstances
+Execution Started : testSortItemsComparable
+[INFO ] 2018-10-24 20:12:19.802 [main] SortTest testSortItemsComparable - Iterating over Items sorted via Arrays.sort (via Comparable)
+[INFO ] 2018-10-24 20:12:19.805 [main] SortTest testSortItemsComparable - Item=a description, 10.0
+[INFO ] 2018-10-24 20:12:19.806 [main] SortTest testSortItemsComparable - Item=a description, 20.0
+[INFO ] 2018-10-24 20:12:19.806 [main] SortTest testSortItemsComparable - Item=c description, 30.0
+[INFO ] 2018-10-24 20:12:19.806 [main] SortTest testSortItemsComparable - Item=d description, 50.0
+[INFO ] 2018-10-24 20:12:19.807 [main] SortTest testSortItemsComparable - Item=e description, 0.05
+[INFO ] 2018-10-24 20:12:19.807 [main] SortTest testSortItemsComparable - Item=f description, 40.0
+[INFO ] 2018-10-24 20:12:19.807 [main] SortTest testSortItemsComparable - Item=z description, 9.0
+[INFO ] 2018-10-24 20:12:19.807 [main] SortTest testSortItemsComparable - Item=z description, 21.0
+Execution Finished : testSortItemsComparable
+Execution Started : coloredItemNotEqualToItem
+Execution Finished : coloredItemNotEqualToItem
+Execution Started : itemImplementsEquals
+Execution Finished : itemImplementsEquals
+Execution Started : testSortItemsByPrice
+[INFO ] 2018-10-24 20:12:19.810 [main] SortTest testSortItemsByPrice - Iterating over Items sorted via ItemByPriceComparator
+[INFO ] 2018-10-24 20:12:19.810 [main] SortTest testSortItemsByPrice - Item=e description, 0.05
+[INFO ] 2018-10-24 20:12:19.810 [main] SortTest testSortItemsByPrice - Item=z description, 9.0
+[INFO ] 2018-10-24 20:12:19.811 [main] SortTest testSortItemsByPrice - Item=a description, 10.0
+[INFO ] 2018-10-24 20:12:19.811 [main] SortTest testSortItemsByPrice - Item=a description, 20.0
+[INFO ] 2018-10-24 20:12:19.811 [main] SortTest testSortItemsByPrice - Item=z description, 21.0
+[INFO ] 2018-10-24 20:12:19.811 [main] SortTest testSortItemsByPrice - Item=c description, 30.0
+[INFO ] 2018-10-24 20:12:19.811 [main] SortTest testSortItemsByPrice - Item=f description, 40.0
+[INFO ] 2018-10-24 20:12:19.812 [main] SortTest testSortItemsByPrice - Item=d description, 50.0
+Execution Finished : testSortItemsByPrice
+Execution Started : coloredItemImplementsEquals
+Execution Finished : coloredItemImplementsEquals
+Execution Started : testSortColoredItemsComparable
+[INFO ] 2018-10-24 20:12:19.813 [main] SortTest testSortColoredItemsComparable - Iterating over ColoredItems sorted via Arrays.sort (via Comparable)
+[INFO ] 2018-10-24 20:12:19.813 [main] SortTest testSortColoredItemsComparable - ColoredItem=a description, 10.0, RED
+[INFO ] 2018-10-24 20:12:19.813 [main] SortTest testSortColoredItemsComparable - ColoredItem=a description, 20.0, ORANGE
+[INFO ] 2018-10-24 20:12:19.813 [main] SortTest testSortColoredItemsComparable - ColoredItem=c description, 30.0, YELLOW
+[INFO ] 2018-10-24 20:12:19.814 [main] SortTest testSortColoredItemsComparable - ColoredItem=d description, 50.0, GREEN
+[INFO ] 2018-10-24 20:12:19.814 [main] SortTest testSortColoredItemsComparable - ColoredItem=e description, 0.05, BLUE
+[INFO ] 2018-10-24 20:12:19.814 [main] SortTest testSortColoredItemsComparable - ColoredItem=f description, 40.0, INDIGO
+[INFO ] 2018-10-24 20:12:19.814 [main] SortTest testSortColoredItemsComparable - ColoredItem=z description, 9.0, RED
+[INFO ] 2018-10-24 20:12:19.814 [main] SortTest testSortColoredItemsComparable - ColoredItem=z description, 21.0, VIOLET
+Execution Finished : testSortColoredItemsComparable
+Execution Started : itemImplementsEqualsAndHashcode
+Execution Finished : itemImplementsEqualsAndHashcode
+Tests run: 9, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.402 sec <<< FAILURE! - in edu.yu.introtoalgs.test.SortTest
+cannotSortBaseAndSubclassInstances(edu.yu.introtoalgs.test.SortTest)  Time elapsed: 0.003 sec  <<< ERROR!
+java.lang.Exception: Unexpected exception, expected<java.lang.RuntimeException> but was<java.lang.AssertionError>
+	at edu.yu.introtoalgs.test.SortTest.cannotSortBaseAndSubclassInstances(SortTest.java:212)
+
+Test cases executed : 9
+
+Results :
+
+Tests in error: 
+  SortTest.cannotSortBaseAndSubclassInstances »  Unexpected exception, expected<...
+
+Tests run: 9, Failures: 0, Errors: 1, Skipped: 0
+
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project SortComparatorSubclass: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/avraham/YUGitRepos/2545/DanielGinsburg/IntroToAlgorithms/assignments/SortComparatorSubclass/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
