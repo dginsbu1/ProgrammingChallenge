@@ -6,6 +6,7 @@ struct Car* getCarById(int id);
 int deleteCarById(int id);
 int modifyCarById(int id, struct Car* myCar);
 int getNumberOfCarsInMemory();
+//definasd
 int getAmountOfUsedMemory();
 int getNumberOfCarsOnDisk();
 struct Car* getAllCarsInMemory();
