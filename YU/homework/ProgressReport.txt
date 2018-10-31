@@ -1,5 +1,0 @@
-Daniel Ginsburg 2/12/18
-Final Project Report:
-I learned the basics of SQL on Kahn Academy. 
-I plan on learning enough of Maven for the project and pulling the SQL Parser.
-Hopefull but probably not Happening: Start thinking about conceptual ideas of how to do project.
