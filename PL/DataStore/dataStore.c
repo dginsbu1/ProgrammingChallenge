@@ -17,6 +17,7 @@ typedef struct Car{
     short year;
     long price;
     int uniqueID;
+    int inMemory;
 } Car;
 
 //DONE
@@ -38,26 +39,27 @@ int setMaxMemory(size_t bytes){
 //make a new Car with the given parameters
 //Test: idExists, noMemory, yesMemory,
 int addCar(char* make, char* model, short year, long price, int uniqueID){
+    //DON'T NEED TO CHECK
     //dont allow 0 as id
-    if(uniqueID == 0){
-        //throw some error
-    }
-    //TODO
-    if(make > 16 | model > 16){/*throw error*/}
-    if(!isUniqueID()) {
-        //throw some error or somethinfg
-    }
-    //check for size issues
+//    if(uniqueID == 0){
+//        //throw some error
+//    }
+//    //TODO
+//    if(make > 16 | model > 16){/*throw error*/}
+//    if(!isUniqueID()) {
+//        //throw some error or something
+//    }
     Car newCar = Car{make, model, year, price, uniqueID};
-    //TODO
     //check memory
-    if(currentCarsAvailable){//not zero
-        //check o make sure the * is in right place
-        *(myCars+getNumberOfCarsInMemory() = newCar;
+    if(currentCarsAvailable){//not zero (there is space)
+        //check to make sure the * is in right place
+        *(myCars+getNumberOfCarsInMemory()) = newCar;
         currentCarsAvailable--;
     }
+    //there is NO space
     else{
-        //do a bucn
+        //TODO
+        //write to file
     }
     carTotal++;
     return 0;
@@ -65,35 +67,34 @@ int addCar(char* make, char* model, short year, long price, int uniqueID){
 
 
 
-//DONE
+//DON'T NEED
 //returns 0/false if a car with id was found
 //returns 1/true if no car was found with id
-static int isUniqueID(int id){
-    return !findCar(id);
-}
-
-//either itterate through all cars, or use HashMap
-//if no car return 0
-//Test: Car in memory, car in disk, no Car
-static struct Car* findCar(int id){
-    if(id == 0){
-        return 0;
-    }
-
-}
+//static int isUniqueID(int id){
+//    return findCar == NULL;
+//}
 
 //retrieve car with given id
 //if no car found return 0
 //place car in memory (shift all cars right and place in memory)
 //if(in memory) take out and shift; else if full then write last car to disk
 struct Car* getCarById(int id){
+    Car* car
+    int position = getPositionInMemory(id);
+    car = shiftCarsRight;
+    if(car == NULL) {
+        car = findCarOnDisk();
+    }if(car == NULL){
+        return NULL;
+    }
+    return &car;
 
 }
 //DONE
 //shifts all the cars from the given position to the right
 //return the car at the given position
 //makes room for new car
-static Car shiftCarsRight(int position){
+struct Car* shiftCarsRight(int position){
     //save the car at position before it get overridden
     Car removedCar*;
     removedCar = (myCars+position)*;
