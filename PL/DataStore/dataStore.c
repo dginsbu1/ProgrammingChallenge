@@ -1,3 +1,5 @@
+#include "driver.c"
+#include "dataStore.h"
 dataStore.c
 
 int currentCarsAvailable = 0;//how many cars are currently available in memory
@@ -88,6 +90,20 @@ int addCar(car){
     return 0;
 }
 
+//TODO
+struct Car writeToDisk(car){
+    return NULL;
+}
+//returns a pointer to the car in memory
+//also deletes the car from the disk
+//TODO
+struct Car* getCarFromDisk(id){
+    //scan file,
+    //  check for id (list ID first),
+    //      if(id == id) scan the other items and make new car and delete car and shift all up
+    //      if(id == id) return 0;
+    return NULL;
+}
 
 //DON'T NEED
 //returns 0/false if a car with id was found
@@ -95,7 +111,6 @@ int addCar(car){
 static int isUniqueID(int id){
     return findCar == NULL;
 }
-
 
 //DONE
 //shifts all the cars from the given position to the right
@@ -109,6 +124,7 @@ struct Car* shiftCarsRight(int position){
     for(int i = position; i > 0; i--){
         (myCars+i)* = (myCars+i -1)*;
     }
+    myCars[0] = NULL;//clears the current spot
     return removedCar;
 }
 //DONE
@@ -122,24 +138,37 @@ int getPositionInMemory(int id){
     return 0;
 }
 
-//returns a pointer to the car in memory
-//also deletes the car from the disk
-//TODO
-struct Car* getCarFromDisk(id){
-    //scan file,
-    //  check for id (list ID first),
-    //      if(id == id) scan the other items and make new car and delete car and shift all up
-    //      if(id == id) return 0;
 
-}
-//
+
+
+//finds car in memory or on disk then deletes
 int deleteCarById(int id){
+    retrieveCarById(id);
     carTotal--;
-    //change currentCarsAvailable
     return 0;
 }
 
-int modifyCarById(int id, struct Car* myCar);
+struct Car retrieveCarById(int id){
+    Car* car;
+    int position = getPositionInMemory(id);//lowest position is 1
+    if(position) {//it was found
+        car = shiftCarsRight(positon);
+        currentCarsAvailable++;
+    }
+    else{
+        car = getCarFromDisk(id);
+    }
+    return car;
+}
+
+int modifyCarById(int id, struct Car* myCar){
+    retrieveCarById(id);
+    addCar(&myCar);
+    //Car car = retrieveCarById(id);
+    //car = *myCar;//TODO does this work
+    // car.make = (*myCar).make; car.model = (*myCar).model; car.year = (*myCar).year; car.price = (*myCar).price; car.uniqueID = (*myCar).uniqueID;
+    addCar(car);
+}
 
 //DONE
 //return the total cars in the car array
@@ -159,7 +188,9 @@ int getNumberOfCarsOnDisk(){
   return carTotal - getNumberOfCarsInMemory();
 }
 
-struct Car* getAllCarsInMemory();
+struct Car* getAllCarsInMemory(){
+    return myCars;
+}
 /* this function does NOT cause the cars on disk to displace those
  * that were already in memory. It uses separate memory to load them
  * and return them to the caller. THE CALLER MUST FREE THIS MEMORY
