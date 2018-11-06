@@ -5,12 +5,14 @@
 //int addCar(char* make, char* model, short year, long price, int uniqueID);TODO DONE
 //struct Car* getAllCarsInMemory();//todo
 //int setMaxMemory(size_t bytes);TODO DONE
-
 //struct Car* getCarById(int id);TODO DONE
-//int deleteCarById(int id);
-//int modifyCarById(int id, struct Car* myCar);todo NONONONO
 //int getNumberOfCarsInMemory();//todo done
 //int getAmountOfUsedMemory();todo done
+
+
+//int deleteCarById(int id);
+//int modifyCarById(int id, struct Car* myCar);todo NONONONO
+
 //int getNumberOfCarsOnDisk();
 
 int printOut(Car* car);
@@ -31,52 +33,57 @@ int main(){
     for(int i =0; i< 4; i++){
         printOut(&(cars[i]));
     }
-
+    printf("get and print car with id 4\n");
     Car *d = getCarById(4);
     printOut(d);
 
-    printf("%d\n",getAmountOfUsedMemory());
-    printf("=============================%d==============================\n",getNumberOfCarsInMemory());
-
-    for(int i =0; i< 4; i++){
-        printOut(&(cars[i]));
-    }
-    printf("=========\n");
-    //Car newishCar = {"new", "car", 2030, 1111, 5};
-    //modifyCarById(1, &newishCar);
-    deleteCarById(1);
-    for(int i =0; i< 4; i++){
-        printOut(&(myCars[i]));
-    }
-    printf("=========\n");
-
-    printf("==========\n");
-    Car newishCar = {"new", "car", 2030, 1111, 5};
-    modifyCarById(1, &newishCar);
-    for(int i =0; i< 4; i++){
-        printOut(&(myCars[i]));
-    }
+    printf("Used Memory: %d\n",getAmountOfUsedMemory());
+    printf("Numbers of cars in memory: %d\n",getNumberOfCarsInMemory());
+    printf("Numbers of cars on disk: %d\n",getNumberOfCarsOnDisk());
 
 
 
-    for(int i =0; i< 4; i++){
-        printOut(&(myCars[i]));
-    }
-
-    //find 1st
-    //delete last
-    Car newCar = {"new", "car", 1111, 111, 5};
-    modifyCarById(2, &newCar);
-    for(int i =0; i< 4; i++){
-        printOut(&(myCars[i]));
-    }
 
 //
-//    printOut(getCarById(2));
-//    printOut(getCarById(3));
-//    printOut(getCarById(4));
-
-    return 0;
+//    for(int i =0; i< 4; i++){
+//        printOut(&(cars[i]));
+//    }
+//    printf("=========\n");
+//    //Car newishCar = {"new", "car", 2030, 1111, 5};
+//    //modifyCarById(1, &newishCar);
+//    deleteCarById(1);
+//    for(int i =0; i< 4; i++){
+//        printOut(&(myCars[i]));
+//    }
+//    printf("=========\n");
+//
+//    printf("==========\n");
+//    Car newishCar = {"new", "car", 2030, 1111, 5};
+//    modifyCarById(1, &newishCar);
+//    for(int i =0; i< 4; i++){
+//        printOut(&(myCars[i]));
+//    }
+//
+//
+//
+//    for(int i =0; i< 4; i++){
+//        printOut(&(myCars[i]));
+//    }
+//
+//    //find 1st
+//    //delete last
+//    Car newCar = {"new", "car", 1111, 111, 5};
+//    modifyCarById(2, &newCar);
+//    for(int i =0; i< 4; i++){
+//        printOut(&(myCars[i]));
+//    }
+//
+////
+////    printOut(getCarById(2));
+////    printOut(getCarById(3));
+////    printOut(getCarById(4));
+//
+//    return 0;
 }
 int  printOut(Car* car){
     for(int i = 0; i<1; i++){

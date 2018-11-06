@@ -185,7 +185,7 @@ int addBuiltCar(Car* carPtr){
         writeToDisk(shiftCarsRight(initialCarsAvailable-1));//TODO off by one?
     }
     ////printf("I finished addBuilt\n");
-    carTotal++;
+    //carTotal++;
     return 0;
 }
 //DONE
@@ -194,6 +194,7 @@ int addBuiltCar(Car* carPtr){
 int addCar(char* make, char* model, short year, long price, int uniqueID){
     Car newCar = {make, model, year, price, uniqueID};
     addBuiltCar(&newCar);
+    carTotal++;
     //printf("Added car with id: %d. size of car %d \n", uniqueID, sizeof(newCar));
     return 0;
 }
