@@ -10,6 +10,7 @@ int getAmountOfUsedMemory();
 int getNumberOfCarsOnDisk();
 struct Car* getAllCarsInMemory();
 
+
 /* this function does NOT cause the cars on disk to displace those
  * that were already in memory. It uses separate memory to load them
  * and return them to the caller. THE CALLER MUST FREE THIS MEMORY
@@ -24,3 +25,5 @@ typedef struct Car{
     int uniqueID;
     //int inMemory;
 } Car;
+//get rid off
+Car *myCars;

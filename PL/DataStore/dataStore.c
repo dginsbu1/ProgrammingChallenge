@@ -2,6 +2,7 @@
 #include "dataStore.h"
 #include <stddef.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 int currentCarsAvailable = 0;//how many cars are currently available in memory
 int initialCarsAvailable = 0;//how many cars slots did we start with in memory
@@ -11,31 +12,93 @@ int mallocCalled = 0;
 Car *myCars;
 int carSize = sizeof(Car);
 
+
+
+//int addCar(char* make, char* model, short year, long price, int uniqueID);
+//int setMaxMemory(size_t bytes);TODO DONE
+//struct Car* getCarById(int id);//TODO DONE
+//int deleteCarById(int id);
+//int modifyCarById(int id, struct Car* myCar);
+//int getNumberOfCarsInMemory();
+//int getAmountOfUsedMemory();
+//int getNumberOfCarsOnDisk();
+//struct Car* getAllCarsInMemory();
+
 //functions list for compiler
 int addBuiltCar(Car* carPtr2);
+int addBuiltCarToEnd(Car* car);
+//int setMaxMemory(size_t bytes);
+//int getNumberOfCarsInMemory();
+int getPositionInMemory(int id);
+//int deleteCarById(int id);
+//int modifyCarById(int id, struct Car* myCar);
+//int getAmountOfUsedMemory();
+//int getNumberOfCarsOnDisk();
 struct Car* getLastCarFromDisk();
 struct Car* writeLastToDisk();
-int setMaxMemory(size_t bytes);
 struct Car* shiftCarsRight(int position);
 struct Car* writeToDisk(Car* carPtr);
-int addCar(char* make, char* model, short year, long price, int uniqueID);
+//int addCar(char* make, char* model, short year, long price, int uniqueID);
 struct Car* getCarFromDiskById(int id);
-int getNumberOfCarsInMemory();
-int getPositionInMemory(int id);
 struct Car* getLastCarFromDisk();
-struct Car* getCarById(int id);
+//struct Car* getCarById(int id);
 struct Car* retrieveCarById(int id);
-int deleteCarById(int id);
-int modifyCarById(int id, struct Car* myCar);
-int getAmountOfUsedMemory();
-int getNumberOfCarsOnDisk();
-struct Car* getAllCarsInMemory();
-struct Car* getAllCarsOnDisk();
+//struct Car* getAllCarsInMemory();
+//struct Car* getAllCarsOnDisk();
 
 //File carFile;//used as disk to save cars
 //make a hashMap based on ID. Key= ID, value= Car,location...
 //Map unique Id
 
+
+//DONE
+//returns the position of car in memory or 0 if not found
+int getPositionInMemory(int id){
+   // //printf("started getPositionInMemory");
+    for(int i = 0; i < getNumberOfCarsInMemory(); i++){
+        if(myCars[i].uniqueID == id){
+            return i+1;//0 reserved for NULL
+        }
+    }
+    return 0;
+}
+
+//retrieve car with given id
+//if no car found return 0
+//place car in memory (shift all cars right and place in memory)
+//if(in memory) take out and shift; else if full then write last car to disk
+struct Car* getCarById(int id){
+    //printf("started getCarById 215\n");
+    Car* car;
+    int position = getPositionInMemory(id);//lowest position is 1
+    if(position) {//it was found. Shift right take out and put at beginning
+        car = shiftCarsRight(position);//TODO worry about overflow
+        myCars[0] = *car;
+    }
+    else{
+        car = getCarFromDiskById(id);
+        addBuiltCar(car);
+    }
+    return car;
+}
+
+//DONE
+//shifts all the cars from the given position to the right
+//return the car at the given position
+//makes room for new car
+struct Car* shiftCarsRight(int position){
+    //save the car at position before it get overridden
+    int realPos = position-1;//positions are one off from "true" position
+    Car* removedCar;
+    if(position != getNumberOfCarsInMemory()) {
+        removedCar = &myCars[realPos];
+    }
+    for(int i = realPos; i > 0; i--){
+        myCars[i] = myCars[i-1];
+    }
+    //myCars[0] = NULL;//clears the current spot
+    return removedCar;
+}
 
 //DONE
 //set the size of the array based on the bytes given.
@@ -46,50 +109,46 @@ int setMaxMemory(size_t bytes){
         if(newInitialCarsAvailable > initialCarsAvailable){//more space
             myCars = realloc(myCars,bytes);
             while(currentCarsAvailable != 0){
-                addBuiltCar(getLastCarFromDisk());
+                addBuiltCarToEnd(getLastCarFromDisk());
             }
             //TODO delete
-            printf("malloced %d space. Made bigger", bytes);
+            //printf("malloced %d space. Made bigger\n", bytes);
         }
         else if(newInitialCarsAvailable < initialCarsAvailable){//need to Shrink
             while(getNumberOfCarsInMemory() > newInitialCarsAvailable){
                 writeLastToDisk();
             }
             myCars = realloc(myCars,bytes);
-            printf("malloced %d space. Made smaller", bytes);
+            //printf("mallocced %d space. Made smaller\n", bytes);
         }
-    } else {
-            Car *myCars = (Car *) malloc(bytes);
-            //number of cars available is bytes / Car size
-            currentCarsAvailable = bytes / carSize;
-            initialarsAvailable = bytes / carSize;
-        }
-        mallocCalled = 1;
-        return 0;
+        myCars = realloc(myCars, bytes);
+        initialCarsAvailable = newInitialCarsAvailable;
+        //printf("Realloc");
     }
-    initialCarsAvailable = newInitialCarsAvailable;
+    else{ //first time
+        myCars = (Car *) malloc(bytes);
+        //number of cars available is bytes / Car size
+            currentCarsAvailable = bytes / carSize;
+            initialCarsAvailable = bytes / carSize;
+            //TODO
+            //printf("I just malloced %d space\n", bytes);
+    }
+    //TODO delete
+    //printf("currentCarsAvailable = %d. initialCarsAvailable = %d.\n", currentCarsAvailable, initialCarsAvailable);
     mallocCalled = 1;
+    //check if malloc worked
+    if (myCars == NULL) {
+        //printf(stderr, "malloc failed\n");
+        return (-1);
+    }
     return 0;
 }
 
-
-//DONE
-//shifts all the cars from the given position to the right
-//return the car at the given position
-//makes room for new car
-struct Car* shiftCarsRight(int position){
-    //save the car at position before it get overridden
-    position--;//positions are one off from "true" position
-    Car* removedCar;
-    removedCar = &myCars[position];
-    for(int i = position; i > 0; i--){
-        //(myCars+i)* = (myCars+i -1)*;
-        myCars[i] = myCars[i-1];//FIXED
-    }
-    //TODO find way to delete current car
-    //myCars[0] = (Car)(NULL);//clears the current spot
-    return removedCar;
+//TODO
+int addBuiltCarToEnd(Car* car){
+    return 0;
 }
+
 //writes the last most recently used car to Disk
 struct Car* writeLastToDisk(){
     return writeLastToDisk(myCars[initialCarsAvailable-currentCarsAvailable-1]);//whatever is at end of line
@@ -103,25 +162,29 @@ struct Car* writeToDisk(Car* carPtr){
 }
 
 //adds Car to available slot memory or disk
-//TODO
-int addBuiltCar(Car* carPtr2){
+//TODO DOES RIGHT SHIFT
+int addBuiltCar(Car* carPtr){
+    ////printf("I just did addBuiltCar\n");
+    ////printf("this is the ID:%d\n",(*carPtr).uniqueID);
     //check memory
     //if memory not initialized yet
     if(initialCarsAvailable == 0){
-        writeToDisk(carPtr2);
+        //printf("No memory\n");
+        writeToDisk(carPtr);
     }
     else if(currentCarsAvailable){//not zero (there is space)
-        //check to make sure the * is in right place
-        //either need to shift and add it
-        //or its been shifted and need to add it
-        myCars[0] = *carPtr2;
+        //should shift from the slot after the last car
+        shiftCarsRight(getNumberOfCarsInMemory()+1);
+        //printf("Currently available\n");
+        myCars[0] = *carPtr;
         currentCarsAvailable--;
-    }
-        //there is NO space so we MAKE IT
+    }//there is NO space so we MAKE IT
     else{//write last car to file, shift all cars over, put in place
         //write last car to file, shift all right, put in first spot
-        writeToDisk(shiftCarsRight(initialCarsAvailable));//TODO off by one?
+        //printf("No space, must shift \n");
+        writeToDisk(shiftCarsRight(initialCarsAvailable-1));//TODO off by one?
     }
+    ////printf("I finished addBuilt\n");
     carTotal++;
     return 0;
 }
@@ -131,6 +194,7 @@ int addBuiltCar(Car* carPtr2){
 int addCar(char* make, char* model, short year, long price, int uniqueID){
     Car newCar = {make, model, year, price, uniqueID};
     addBuiltCar(&newCar);
+    //printf("Added car with id: %d. size of car %d \n", uniqueID, sizeof(newCar));
     return 0;
 }
 
@@ -151,16 +215,7 @@ int getNumberOfCarsInMemory(){
     return initialCarsAvailable - currentCarsAvailable;
 }
 
-//DONE
-//returns the position of car in memory or 0 if not found
-int getPositionInMemory(int id){
-    for(int i = 0; i < getNumberOfCarsInMemory(); i++){
-        if(myCars[i].uniqueID == id){
-            return i+1;//0 reserved for NULL
-        }
-    }
-    return 0;
-}
+
 
 //returns the last car on Disk
 //TODO
@@ -174,25 +229,6 @@ struct Car* getLastCarFromDisk(){
     return (Car*)(NULL);
 }
 
-
-//retrieve car with given id
-//if no car found return 0
-//place car in memory (shift all cars right and place in memory)
-//if(in memory) take out and shift; else if full then write last car to disk
-struct Car* getCarById(int id){
-    Car* car;
-    int position = getPositionInMemory(id);//lowest position is 1
-    if(position) {//it was found
-        car = shiftCarsRight(position);
-        currentCarsAvailable++;//just "removed a car" will add back soon
-    }
-    else{
-        car = getCarFromDiskById(id);
-    }
-    //put car in new slot
-    addBuiltCar(car);
-    return car;
-}
 
 struct Car* retrieveCarById(int id){
     Car* car;
