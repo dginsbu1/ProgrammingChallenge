@@ -1,4 +1,4 @@
-dataStore.h
+#include <stddef.h>
 
 int addCar(char* make, char* model, short year, long price, int uniqueID);
 int setMaxMemory(size_t bytes);
@@ -16,3 +16,11 @@ struct Car* getAllCarsInMemory();
  * WHEN FINISHED WITH THESE CARS.
 */
 struct Car* getAllCarsOnDisk();
+typedef struct Car{
+    char* make;//leave blank space
+    char* model;//leave blank space
+    short year;
+    long price;
+    int uniqueID;
+    //int inMemory;
+} Car;
