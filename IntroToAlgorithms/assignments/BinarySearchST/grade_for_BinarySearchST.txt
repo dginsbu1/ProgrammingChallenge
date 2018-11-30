@@ -1,0 +1,54 @@
+Grade for assignment [DanielGinsburg]: 9/10
+building Student DanielGinsburg assignment code base from directory /Users/avraham/YUGitRepos/2545/DanielGinsburg/IntroToAlgorithms/assignments/BinarySearchST
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Test cases to execute : 1
+Running edu.yu.introtoalgs.test.BinarySearchSTTest
+[INFO ] 2018-11-29 20:02:21.263 [main] BinarySearchSTTest demonstrateHowKeysWillBeSorted - Test cases will use these keys: [2, 3, 1, 5, 9, 6, 10]
+[INFO ] 2018-11-29 20:02:21.265 [main] BinarySearchSTTest demonstrateHowKeysWillBeSorted - Will add two more keys, and demo correct sorting behavior
+[INFO ] 2018-11-29 20:02:21.265 [main] BinarySearchSTTest demonstrateHowKeysWillBeSorted - Sorted demo input: [0, 1, 10, 2, 3, 5, 6, 9, 95]
+[INFO ] 2018-11-29 20:02:21.265 [main] BinarySearchSTTest demonstrateHowKeysWillBeSorted - Note: lexicographic ordering of String-valued keys!
+[INFO ] 2018-11-29 20:02:21.266 [main] BinarySearchSTTest demonstrateHowKeysWillBeSorted - Note: String-valued keys will be associated with corresponding int-valued values
+Execution Started : testFloor
+Execution Finished : testFloor
+Execution Started : testFloorForNumberGreaterThanAnyInST
+Execution Failure : java.lang.NullPointerException
+Execution Finished : testFloorForNumberGreaterThanAnyInST
+Execution Started : testRankForNumberGreaterThanAnyInST
+Execution Finished : testRankForNumberGreaterThanAnyInST
+Execution Started : testFloorForNumberLessThanAnyInST
+Execution Finished : testFloorForNumberLessThanAnyInST
+Execution Started : testRankForNumberLessThanAnyInST
+Execution Finished : testRankForNumberLessThanAnyInST
+Execution Started : testDelete
+[INFO ] 2018-11-29 20:02:21.323 [main] BinarySearchSTTest testDelete - testDelete: actual keys=[2, 3, 5, 6, 9]
+Execution Finished : testDelete
+Execution Started : areKeysCorrectlyMappedToValues
+[INFO ] 2018-11-29 20:02:21.325 [main] BinarySearchSTTest areKeysCorrectlyMappedToValues - testVanilla(): actual keys=[1, 10, 2, 3, 5, 6, 9]
+Execution Finished : areKeysCorrectlyMappedToValues
+Tests run: 7, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.546 sec <<< FAILURE! - in edu.yu.introtoalgs.test.BinarySearchSTTest
+testFloorForNumberGreaterThanAnyInST(edu.yu.introtoalgs.test.BinarySearchSTTest)  Time elapsed: 0.003 sec  <<< ERROR!
+java.lang.NullPointerException
+	at edu.yu.introtoalgs.test.BinarySearchSTTest.testFloorForNumberGreaterThanAnyInST(BinarySearchSTTest.java:106)
+
+Test cases executed : 7
+
+Results :
+
+Tests in error: 
+  BinarySearchSTTest.testFloorForNumberGreaterThanAnyInST:106 » NullPointer
+
+Tests run: 7, Failures: 0, Errors: 1, Skipped: 0
+
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project BinarySearchST: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/avraham/YUGitRepos/2545/DanielGinsburg/IntroToAlgorithms/assignments/BinarySearchST/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
