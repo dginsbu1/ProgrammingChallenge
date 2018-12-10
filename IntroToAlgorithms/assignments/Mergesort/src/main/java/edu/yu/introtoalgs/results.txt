@@ -13,5 +13,5 @@ Normalized Performance for MergeX:            5.306733167082294
 Normalized Performance for Merge:             5.875311720698254
 I parallelized the splitting process.
 It was similar to the recursive method except that instead of recursively calling the sort method, 
-it creates new threads to due smaller work.
+it creates new threads to do less work.
 
