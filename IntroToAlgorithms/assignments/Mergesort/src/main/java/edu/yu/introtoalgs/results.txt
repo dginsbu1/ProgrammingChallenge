@@ -1,0 +1,17 @@
+Daniel Ginsburg
+Data Set: Read 645288 Strings
+Runs: 20 times
+Results:
+Using class JDKParallelMerge: the average was 40.1 milliseconds
+Using class ParallelMerge: the average was 104.9 milliseconds (10,000 Cutoff)
+Using class MergeX: the average was 212.8 milliseconds (10 Cutoff) 
+Using class Merge: the average was 235.6 milliseconds
+Normalized Performance:
+Normalized Performance for JDKParallelMerge:  1.0
+Normalized Performance for ParallelMerge:     2.615960099750623 
+Normalized Performance for MergeX:            5.306733167082294 
+Normalized Performance for Merge:             5.875311720698254
+I parallelized the splitting process.
+It was similar to the recursive method except that instead of recursively calling the sort method, 
+it creates new threads to due smaller work.
+
