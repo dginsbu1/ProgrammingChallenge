@@ -1,5 +1,5 @@
 package edu.yu.introtoalgs;
-import java.awt.image.RGBImageFilter;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.security.PrivateKey;
@@ -18,38 +18,38 @@ public class TopologicalQ {
     private int inDegrees[];
     private Digraph G;
 
-    public static void main(String args[]) throws FileNotFoundException {
-        Digraph dg = new Digraph(13);
-//        dg.addEdge(0,1);
-//        dg.addEdge(0,2);
-//        dg.addEdge(4,3);
-//        dg.addEdge(3,2);
-//        dg.addEdge(2,5);
-//        dg.addEdge(5,0);
-//        dg.addEdge(5,0);
-
-        File file = new File("C:\\Users\\dgmon\\YU\\nums.txt");
-        Scanner in;
-        in = new Scanner (file);
-
-        while(in.hasNextLine()) {
-            String string = in.nextLine();
-            String[] line = string.split(" ");
-            int v = Integer.parseInt(line[0]);
-            int w = Integer.parseInt(line[1]);
-            dg.addEdge(v,w);
-        }
-
-        //dg.addEdge(5,0);
-        TopologicalQ tq = new TopologicalQ(dg);
-        Iterable<Integer> order = tq.order();
-        System.out.println("has order: "+ tq.hasOrder());
-        System.out.println("order is ");
-        for(Integer s : order){
-            System.out.println(s);
-        }
-
-    }
+//    public static void main(String args[]) throws FileNotFoundException {
+//        Digraph dg = new Digraph(8);
+////        dg.addEdge(0,1);
+////        dg.addEdge(0,2);
+////        dg.addEdge(4,3);
+////        dg.addEdge(3,2);
+////        dg.addEdge(2,5);
+////        dg.addEdge(5,0);
+////        dg.addEdge(5,0);
+//
+//        File file = new File("C:\\Users\\dgmon\\YU\\nums.txt");
+//        Scanner in;
+//        in = new Scanner (file);
+//
+//        while(in.hasNextLine()) {
+//            String string = in.nextLine();
+//            String[] line = string.split(" ");
+//            int v = Integer.parseInt(line[0]);
+//            int w = Integer.parseInt(line[1]);
+//            dg.addEdge(v,w);
+//        }
+//
+//        //dg.addEdge(5,0);
+//        TopologicalQ tq = new TopologicalQ(dg);
+//        Iterable<Integer> order = tq.order();
+//        System.out.println("has order: "+ tq.hasOrder());
+//        System.out.println("order is ");
+//        for(Integer s : order){
+//            System.out.println(s);
+//        }
+//
+//    }
 //    This constructor determines whether the digraph has a cycle or
 //    not. If it does not have a cycle, the constructor determines a
 //    valid topological sort for the digraph.
