@@ -26,10 +26,12 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 //     table.delete(1);
 //     table.print();//0
 
-//     Integer[] ints1 = {0,2,3,4,5,6,7,8};
-//     String[] strs1 = {"a", "b", "c", "d", "e", "f","g","h"};
-//     BinarySearchST<Integer, String> table2 = new BinarySearchST<> (ints1, strs1);
-//     //System.out.println("table 2:");
+     Integer[] ints1 = {0,2,3,4,5,6,7,8};
+     String[] strs1 = {"a", "b", "c", "d", "e", "f","g","h"};
+     BinarySearchST<Integer, String> table2 = new BinarySearchST<> (ints1, strs1);
+     //System.out.println(table2.floor(27));
+     
+
 
 //     Integer[] ints2 = {9,7,6,5,4,3,2,1};
 //     String[] strs2 = {"a", "b", "c", "d", "e","f","g","h"};

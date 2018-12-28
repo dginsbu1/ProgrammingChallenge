@@ -19,24 +19,24 @@ public class ParallelMerge extends RecursiveAction implements Mergesorter  {
         this.high = high;
         this.list = a;
     }
-    public static void main(String args[]){
-        Comparable a[] = {"bed","bug","dad","yes","zoo","now","for","tip","ilk","dim","tag","jot","sob","nob","sky","hut","men","egg","few","jay","owl","joy","rap",
-                "gig","wee","was","wad","fee","tap","tar","dug","jam","all","bad","yet"};
-        Comparable b[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,0};
-
-        ParallelMerge parM = new ParallelMerge();
-        //ForkJoinPool pool = new ForkJoinPool();
-        long startTime = System.currentTimeMillis();
-        //pool.invoke(parM);
-        parM.sortIt(a);
-        //pool.execute(parM);
-        long endTime = System.currentTimeMillis();
-        MergeX.show(a);
-        System.out.println("The list is sorted: " + isSorted(a));
-        System.out.println("ParallelMerge took " + (endTime - startTime) +
-                " milliseconds.");
-
-    }
+//    public static void main(String args[]){
+//        Comparable a[] = {"bed","bug","dad","yes","zoo","now","for","tip","ilk","dim","tag","jot","sob","nob","sky","hut","men","egg","few","jay","owl","joy","rap",
+//                "gig","wee","was","wad","fee","tap","tar","dug","jam","all","bad","yet"};
+//        Comparable b[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,0};
+//
+//        ParallelMerge parM = new ParallelMerge();
+//        //ForkJoinPool pool = new ForkJoinPool();
+//        long startTime = System.currentTimeMillis();
+//        //pool.invoke(parM);
+//        parM.sortIt(a);
+//        //pool.execute(parM);
+//        long endTime = System.currentTimeMillis();
+//        MergeX.show(a);
+//        System.out.println("The list is sorted: " + isSorted(a));
+//        System.out.println("ParallelMerge took " + (endTime - startTime) +
+//                " milliseconds.");
+//
+//    }
 
     @SuppressWarnings("unchecked")
     public void sortIt(Comparable[] a) {

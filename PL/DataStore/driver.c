@@ -8,12 +8,20 @@
 //struct Car* getCarById(int id);TODO DONE
 //int getNumberOfCarsInMemory();//todo done
 //int getAmountOfUsedMemory();todo done
+//int getNumberOfCarsOnDisk();todo
+/* this function does NOT cause the cars on disk to displace those
+ * that were already in memory. It uses separate memory to load them
+ * and return them to the caller. THE CALLER MUST FREE THIS MEMORY
+ * WHEN FINISHED WITH THESE CARS.
+*///TODO
+//struct Car* getAllCarsOnDisk();
+
 
 
 //int deleteCarById(int id);
 //int modifyCarById(int id, struct Car* myCar);todo NONONONO
 
-//int getNumberOfCarsOnDisk();
+
 
 int printOut(Car* car);
 

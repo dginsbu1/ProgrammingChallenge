@@ -4,54 +4,29 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+int carPosition; //what spot in Car* am I at using pointer
 int currentCarsAvailable = 0;//how many cars are currently available in memory
 int initialCarsAvailable = 0;//how many cars slots did we start with in memory
 int carTotal = 0;//how many cars are there Total
-int carPosition; //what spot in Car* am I at using pointer
 int mallocCalled = 0;
-Car *myCars;
 int carSize = sizeof(Car);
+Car *myCars;
+FILE *disk = fopen("disk.txt", "w");
 
-
-
-//int addCar(char* make, char* model, short year, long price, int uniqueID);
-//int setMaxMemory(size_t bytes);TODO DONE
-//struct Car* getCarById(int id);//TODO DONE
-//int deleteCarById(int id);
-//int modifyCarById(int id, struct Car* myCar);
-//int getNumberOfCarsInMemory();
-//int getAmountOfUsedMemory();
-//int getNumberOfCarsOnDisk();
-//struct Car* getAllCarsInMemory();
 
 //functions list for compiler
 int addBuiltCar(Car* carPtr2);
 int addBuiltCarToEnd(Car* car);
-//int setMaxMemory(size_t bytes);
-//int getNumberOfCarsInMemory();
 int getPositionInMemory(int id);
-//int deleteCarById(int id);
-//int modifyCarById(int id, struct Car* myCar);
-//int getAmountOfUsedMemory();
-//int getNumberOfCarsOnDisk();
 struct Car* getLastCarFromDisk();
 struct Car* writeLastToDisk();
 struct Car* shiftCarsRight(int position);
 struct Car* writeToDisk(Car* carPtr);
-//int addCar(char* make, char* model, short year, long price, int uniqueID);
 struct Car* getCarFromDiskById(int id);
 struct Car* getLastCarFromDisk();
-//struct Car* getCarById(int id);
 struct Car* retrieveCarById(int id);
-//struct Car* getAllCarsInMemory();
-//struct Car* getAllCarsOnDisk();
-
-//File carFile;//used as disk to save cars
-//make a hashMap based on ID. Key= ID, value= Car,location...
-//Map unique Id
 
 
-//DONE
 //returns the position of car in memory or 0 if not found
 int getPositionInMemory(int id){
    // //printf("started getPositionInMemory");
@@ -82,10 +57,8 @@ struct Car* getCarById(int id){
     return car;
 }
 
-//DONE
 //shifts all the cars from the given position to the right
-//return the car at the given position
-//makes room for new car
+//return the car at the given position //makes room for new car
 struct Car* shiftCarsRight(int position){
     //save the car at position before it get overridden
     int realPos = position-1;//positions are one off from "true" position
@@ -100,9 +73,7 @@ struct Car* shiftCarsRight(int position){
     return removedCar;
 }
 
-//DONE
 //set the size of the array based on the bytes given.
-//Divide the bytes into the
 int setMaxMemory(size_t bytes){
     int newInitialCarsAvailable = bytes/carSize;
     if(mallocCalled){
@@ -144,11 +115,31 @@ int setMaxMemory(size_t bytes){
     return 0;
 }
 
+/* this function does NOT cause the cars on disk to displace those
+ * that were already in memory. It uses separate memory to load them
+ * and return them to the caller. THE CALLER MUST FREE THIS MEMORY
+ * WHEN FINISHED WITH THESE CARS.
+*///TODO
+struct Car* getAllCarsOnDisk(){
+
+//    //FILE* fp = fopen("test.txt", "r");
+//    if(!fp) {
+//        perror("File opening failed");
+//        return EXIT_FAILURE;
+//    }
+//    int c; // note: int, not char, required to handle EOF
+//    while ((c = fgetc(fp)) != EOF) {
+//        putchar(c);
+//    }
+//    fclose(fp);
+}
+
 //TODO
 int addBuiltCarToEnd(Car* car){
     return 0;
 }
 
+//TODO
 //writes the last most recently used car to Disk
 struct Car* writeLastToDisk(){
     return writeLastToDisk(myCars[initialCarsAvailable-currentCarsAvailable-1]);//whatever is at end of line
@@ -156,6 +147,11 @@ struct Car* writeLastToDisk(){
 
 //TODO writes the last most recently used car
 struct Car* writeToDisk(Car* carPtr){
+
+    if (disk != NULL) {
+        fwrite(car1, sizeof(struct date), 1, disk);
+        fclose(disk);
+    }
     currentCarsAvailable--;
     //put cars at end of array
     return (Car*)(NULL);
@@ -188,16 +184,6 @@ int addBuiltCar(Car* carPtr){
     //carTotal++;
     return 0;
 }
-//DONE
-//make a new Car with the given parameters
-//Test: idExists, noMemory, yesMemory,
-int addCar(char* make, char* model, short year, long price, int uniqueID){
-    Car newCar = {make, model, year, price, uniqueID};
-    addBuiltCar(&newCar);
-    carTotal++;
-    //printf("Added car with id: %d. size of car %d \n", uniqueID, sizeof(newCar));
-    return 0;
-}
 
 //returns a pointer to the car in memory
 //also deletes the car from the disk
@@ -209,14 +195,6 @@ struct Car* getCarFromDiskById(int id){
     //      if(id == id) return 0;
     return (Car*)(NULL);
 }
-
-//DONE
-//return the total cars in the car array
-int getNumberOfCarsInMemory(){
-    return initialCarsAvailable - currentCarsAvailable;
-}
-
-
 
 //returns the last car on Disk
 //TODO
@@ -230,6 +208,19 @@ struct Car* getLastCarFromDisk(){
     return (Car*)(NULL);
 }
 
+//make a new Car with the given parameters
+int addCar(char* make, char* model, short year, long price, int uniqueID){
+    Car newCar = {make, model, year, price, uniqueID};
+    addBuiltCar(&newCar);
+    carTotal++;
+    //printf("Added car with id: %d. size of car %d \n", uniqueID, sizeof(newCar));
+    return 0;
+}
+
+//return the total cars in the car array
+int getNumberOfCarsInMemory(){
+    return initialCarsAvailable - currentCarsAvailable;
+}
 
 struct Car* retrieveCarById(int id){
     Car* car;
@@ -252,8 +243,6 @@ int deleteCarById(int id){
     return 0;
 }
 
-
-
 int modifyCarById(int id, struct Car* myCar){
     retrieveCarById(id);
     addBuiltCar(myCar);
@@ -264,27 +253,16 @@ int modifyCarById(int id, struct Car* myCar){
     return 0;
 }
 
-
-//DONE
-//returns the number of cars used * the carSize;
-//returns memory used in bytes
+//returns the number of cars used * the carSize; returns memory used in bytes
 int getAmountOfUsedMemory(){
     return getNumberOfCarsInMemory() * carSize;
 }
 
-//DONE
+
 int getNumberOfCarsOnDisk(){
   return carTotal - getNumberOfCarsInMemory();
 }
 
 struct Car* getAllCarsInMemory(){
-    return myCars;
-}
-/* this function does NOT cause the cars on disk to displace those
- * that were already in memory. It uses separate memory to load them
- * and return them to the caller. THE CALLER MUST FREE THIS MEMORY
- * WHEN FINISHED WITH THESE CARS.
-*/
-struct Car* getAllCarsOnDisk(){
     return myCars;
 }

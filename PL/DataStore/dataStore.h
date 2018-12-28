@@ -11,12 +11,6 @@ int getNumberOfCarsOnDisk();
 struct Car* getAllCarsInMemory();
 
 
-/* this function does NOT cause the cars on disk to displace those
- * that were already in memory. It uses separate memory to load them
- * and return them to the caller. THE CALLER MUST FREE THIS MEMORY
- * WHEN FINISHED WITH THESE CARS.
-*/
-struct Car* getAllCarsOnDisk();
 typedef struct Car{
     char* make;//leave blank space
     char* model;//leave blank space
