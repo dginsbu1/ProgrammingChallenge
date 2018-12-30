@@ -1,0 +1,27 @@
+Grade for assignment [DanielGinsburg]: 10/10
+building Student DanielGinsburg assignment code base from directory /Users/avraham/YUGitRepos/2545/DanielGinsburg/IntroToAlgorithms/assignments/IndexMinPQ
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Test cases to execute : 1
+Running edu.yu.introtoalgs.test.IndexMinPQTest
+Execution Started : verifyDeleteMinWorks
+[INFO ] 2018-12-24 20:04:32.425 [main] IndexMinPQTest initializeNewIndexMinPQ - Initialized new IndexMinPQ with this input: [it, was, the, best, of, times, it, was, the, worst]
+Execution Finished : verifyDeleteMinWorks
+Execution Started : testMinimumness
+[INFO ] 2018-12-24 20:04:32.428 [main] IndexMinPQTest initializeNewIndexMinPQ - Initialized new IndexMinPQ with this input: [it, was, the, best, of, times, it, was, the, worst]
+Execution Finished : testMinimumness
+Execution Started : afterInitialPQConstruction
+[INFO ] 2018-12-24 20:04:32.429 [main] IndexMinPQTest initializeNewIndexMinPQ - Initialized new IndexMinPQ with this input: [it, was, the, best, of, times, it, was, the, worst]
+[INFO ] 2018-12-24 20:04:32.430 [main] IndexMinPQTest afterInitialPQConstruction - Testing immediately after IndexMinPQ construction
+[INFO ] 2018-12-24 20:04:32.478 [main] IndexMinPQTest iterableToList - Iterator produces this sequence of Strings: [best, it, it, of, the, the, times, was, was, worst]
+[INFO ] 2018-12-24 20:04:32.479 [main] IndexMinPQTest keyIndices - IndexMinPQ indices in Iterator order: [3, 0, 6, 4, 8, 2, 5, 7, 1, 9]
+Execution Finished : afterInitialPQConstruction
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.451 sec - in edu.yu.introtoalgs.test.IndexMinPQTest
+Test cases executed : 3
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+
