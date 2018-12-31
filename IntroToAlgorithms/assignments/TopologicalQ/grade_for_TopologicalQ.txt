@@ -1,0 +1,33 @@
+Grade for assignment [DanielGinsburg]: 10/10
+building Student DanielGinsburg assignment code base from directory /Users/avraham/YUGitRepos/2545/DanielGinsburg/IntroToAlgorithms/assignments/TopologicalQ
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Test cases to execute : 1
+Running edu.yu.introtoalgs.test.TopologicalQTest
+Execution Started : topSortExists
+[INFO ] 2018-12-17 20:09:18.959 [main] TopologicalQTest topSortExists - # Edges=8
+[INFO ] 2018-12-17 20:09:18.961 [main] TopologicalQTest topSortExists - # Vertices=7
+[INFO ] 2018-12-17 20:09:18.961 [main] TopologicalQTest topSortExists - The graph: edu.yu.introtoalgs.Digraph@29f69090
+[INFO ] 2018-12-17 20:09:18.963 [main] TopologicalQTest topSortExists - Printing a topological order
+[INFO ] 2018-12-17 20:09:18.963 [main] TopologicalQTest topSortExists - vertex 0
+[INFO ] 2018-12-17 20:09:18.963 [main] TopologicalQTest topSortExists - vertex 1
+[INFO ] 2018-12-17 20:09:18.963 [main] TopologicalQTest topSortExists - vertex 2
+[INFO ] 2018-12-17 20:09:18.964 [main] TopologicalQTest topSortExists - vertex 5
+[INFO ] 2018-12-17 20:09:18.964 [main] TopologicalQTest topSortExists - vertex 3
+[INFO ] 2018-12-17 20:09:18.964 [main] TopologicalQTest topSortExists - vertex 4
+[INFO ] 2018-12-17 20:09:18.964 [main] TopologicalQTest topSortExists - vertex 6
+Execution Finished : topSortExists
+Execution Started : directedCycleExists
+[INFO ] 2018-12-17 20:09:18.966 [main] TopologicalQTest directedCycleExists - # Edges=9
+[INFO ] 2018-12-17 20:09:18.966 [main] TopologicalQTest directedCycleExists - # Vertices=6
+[INFO ] 2018-12-17 20:09:18.966 [main] TopologicalQTest directedCycleExists - The graph: edu.yu.introtoalgs.Digraph@4c6e276e
+Execution Finished : directedCycleExists
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.378 sec - in edu.yu.introtoalgs.test.TopologicalQTest
+Test cases executed : 2
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
