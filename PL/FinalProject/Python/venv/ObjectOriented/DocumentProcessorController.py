@@ -25,7 +25,7 @@ class DocumentProcessorController:
         with open(self._path) as file:
             self._text = file.read()
         result = self._processor.process(self._text)
-        if not (self._grep and self._wc):
+        if not (self._wc):
             resultString = str(result)
             print(resultString)
         else:

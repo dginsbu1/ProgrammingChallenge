@@ -54,7 +54,13 @@ class Processor:
 
         elif not(grep) and wc:
             #ans = filter(lambda word: not(word == ""), map(lambda word: re.sub("[^a-zA-Z]", '', word).strip(), reduce(list.__add__, map(lambda line: line.split(), map(lambda line: line.lower(), text)))))  # remove nonletters
-            self.printNL(filter(lambda word: not(word == ""), map(lambda word: re.sub("[^a-zA-Z]", '', word).strip(), reduce(list.__add__, map(lambda line: line.split(), map(lambda line: line.lower(), text))))))  # remove nonletters)
+            self.printNL(
+                self.countWords(
+                filter(lambda word: not(word == ""),
+                map(lambda word: re.sub("[^a-zA-Z]", '', word).strip(),
+                reduce(list.__add__,
+                map(lambda line: line.split(),
+                map(lambda line: line.lower(), text)))))))  # remove nonletters)
 
     def countWords(self, wordList):
         myDict = {}
