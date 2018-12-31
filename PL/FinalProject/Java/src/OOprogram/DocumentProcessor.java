@@ -28,9 +28,7 @@ public class DocumentProcessor{
         wc = caseConverter != null;
     }
 
-    //The “DocumentProcessor.process” method will return a
-    //map that maps a unique word to the number of times it appeared in the document. MyApp will then print out the
-    //results to the console, with one word-number combination per line
+
     public Object process(String text){
         this.text = text;
         if(grep && wc){

@@ -16,13 +16,13 @@ class DocumentProcessorController{
         this.buildProcessor(args);
         //set up text
         const fs = require('fs');
-        const fileUrl = new URL("file:C:\\Users\\dgmon\\YU\\test.txt");
+        let url = "file:"+this.path;
+        const fileUrl = new URL(url);
         let text = fs.readFileSync(fileUrl).toString();
-         console.log(text);
+         //console.log(text);
         //run the processor
         let result = this.processor.process(text);
         if(this.grep && !this.wc){
-            //TODO
             this.printMe(result);
         }
         else{
@@ -68,7 +68,7 @@ class DocumentProcessorController{
         }
     }
     setWC(builder1) {
-        console.log(typeof builder);
+        //console.log(typeof builder);
 
     }
 

@@ -5,15 +5,11 @@ const NonEnglishFilter= require("./NonEnglishFilter");
 const Splitter= require("./Splitter");
 const UniqueWordCounter=require("./UniqueWordCounter");
 const LineFilter = require("./LineFilter");
-
 const DocumentProcessorController = require("./DocumentProcessorController");
-
-
 class Controller {}
 
-
 let processorController = new DocumentProcessorController();
-//console.log(process.argv);
+
 processorController.beginProcess(process.argv);
 
 module.exports = Controller;

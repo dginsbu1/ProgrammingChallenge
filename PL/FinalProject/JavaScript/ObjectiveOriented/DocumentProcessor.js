@@ -7,7 +7,7 @@ const LineFilter = require("./LineFilter");
 class DocumentProcessor{
     constructor(builder) {
         this.lineFilter = builder.getLineFilter();
-        console.log(builder.lowe)
+        //console.log(builder.lowe)
         this.caseConverter = builder.getCaseConverter();
         this.nonABCFilter = builder.getNonABCFilter();
         this.wordFinder = builder.getWordFinder();

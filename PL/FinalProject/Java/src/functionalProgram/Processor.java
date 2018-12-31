@@ -3,6 +3,7 @@ package functionalProgram;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.text.Annotation;
 import java.util.function.*;
 import java.util.*;
@@ -29,17 +30,14 @@ public class Processor {
         }
 
 
-
-
         //get text
         File file = new File(path);
-        List<String> lines = Files.readAllLines(file.toPath());
+        List<String> lines = Files.readAllLines(Paths.get(path));
 
         //perform task based on grep/wc structure
         if(grep && !wc){ //basic grep ex. "grep this silly.txt"
             lines.stream().filter(line -> line.contains(args[1])).forEach(y->System.out.println(y));
         }
-
         else if(grep && wc){//complicated grep ex.  "grep this silly.txt | wc"
             Map myMap =
                 lines.stream()

@@ -57,7 +57,7 @@ public class DocumentProcessorController {
             wc = true;
             setWC(builder);
         }
-        System.out.printf("Grep: %b, wc: %b \n", grep, wc);
+        //System.out.printf("Grep: %b, wc: %b \n", grep, wc);
         text = pathToString(path);
         processor = builder.build();
     }

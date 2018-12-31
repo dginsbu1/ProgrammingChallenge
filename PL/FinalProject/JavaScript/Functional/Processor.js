@@ -1,4 +1,3 @@
-
 function printMe(ans) {
     for(var i in ans) {
         console.log(ans[i]);
@@ -12,9 +11,9 @@ function printWC(ans) {
 class Processor{
     constructor(){
     }
-    
+
     process(args){
-       // console.log(args)
+        // console.log(args)
         //set up grep ad wc
         let grep = false;
         let wc = false;
@@ -36,7 +35,7 @@ class Processor{
         console.log(path);
         const fileUrl = new URL(path);
         let text = fs.readFileSync(fileUrl).toString();
-       // console.log(text);
+        // console.log(text);
 
         //
         let lines = text.split(/\n+/);
@@ -49,7 +48,7 @@ class Processor{
             let ans =
                 lines.filter(line => line.includes(searchString))
                     .reduce((text, word) => text+word, " ").toLowerCase().split(/\s/g)
-                    .map(word => word.replace(/\W/g, ''))
+                    .map(word => word.replace(/[^a-zA-Z_]/g, ''))
                     .filter(word => !(word == ""))//get rid of "" that were counted as words
                     .reduce(function(stats, word) {
                         if (stats[word]) {
@@ -64,7 +63,7 @@ class Processor{
             let ans =
                 lines
                     .reduce((text, word) => text + word, "").toLowerCase().split(/\s/g)
-                    .map(word => word.replace(/\W/g, ''))
+                    .map(word => word.replace(/[^a-zA-Z_]/g, ''))
                     .filter(word => !(word == ""))//get rid of "" that were counted as words
                     .reduce(function (stats, word) {
                         if (stats[word]) {
@@ -81,5 +80,3 @@ class Processor{
 }
 let processor = new Processor();
 processor.process(process.argv);
-
-    
