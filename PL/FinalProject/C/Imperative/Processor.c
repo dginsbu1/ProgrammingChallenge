@@ -39,7 +39,7 @@ int main(int argc, char* argv[]){
 
 void process(int argc, char* argv[]) {
     if(strcmp(argv[1],"grep") == 0) {//grep
-        printf("we are doing grep\n");
+        //printf("we are doing grep\n");
         searchWord = argv[2];
         path = argv[3];
         grep = 1;
@@ -54,7 +54,7 @@ void process(int argc, char* argv[]) {
         path = argv[2];
     }
 
-    printf("path is %s\n", path);
+    //printf("path is %s\n", path);
     FILE *fp = fopen(path, "r");
     if(fp == NULL){
         printf("file didn't open\n");
@@ -72,7 +72,6 @@ void process(int argc, char* argv[]) {
        // printf("grep and wc\n");
         filter(buffer);
         text = convertCase(text);
-
         words = splitText(text);
         words = nonAlphabeticFilter(words);
         frequencyCounter(words);
@@ -98,18 +97,17 @@ char* readFile(FILE *fp){
         fseek (fp, 0, SEEK_END);
         length = ftell(fp);
         fseek (fp, 0, SEEK_SET);
-        buffer = malloc (length-5);
+        buffer = (char*)(malloc (length));
         buffer[0] = '\0';
-        //memset(&buffer[0], 0, sizeof(buffer));
+        memset(&buffer[0], 0, sizeof(buffer));
 
         if (buffer)
         {
-            fread(buffer, 1, length, fp);
+            fread(buffer, length+50, 1, fp);
         }
         fclose (fp);
     }
-    //printf(buffer);
-
+    //strcat(buffer, '\0');
     return buffer;
 
 }

@@ -4,9 +4,6 @@
     <list default="true" id="4bf72ad0-ba21-4463-bfec-27e672813140" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../C/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../C/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../C/Imperative/processor.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../C/Imperative/processor.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Functional/Processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Functional/Processor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/ObjectOriented/DocumentProcessorController.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/ObjectOriented/DocumentProcessorController.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../IndexMinPQ/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../helloIntelij/.idea/compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../helloIntelij/.idea/misc.xml" beforeDir="false" />
@@ -64,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/venv/Functional/Processor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="62" column="58" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
+            <state relative-caret-position="203">
+              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -185,7 +182,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-15" />
     <option name="width" value="2113" />
     <option name="height" value="2075" />
@@ -365,15 +362,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="845" height="830" extended-state="0" />
-    <editor active="true" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2179803" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.116754614" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.33192685" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49933067" visible="true" weight="0.32102272" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49933067" weight="0.31786215" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49933067" weight="0.39803094" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -509,8 +505,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Functional/Processor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="62" column="58" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
+        <state relative-caret-position="203">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

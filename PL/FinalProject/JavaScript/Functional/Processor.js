@@ -32,7 +32,7 @@ class Processor{
         //set up text
         const fs = require('fs');
         path = "file:"+path;
-        console.log(path);
+        //console.log(path);
         const fileUrl = new URL(path);
         let text = fs.readFileSync(fileUrl).toString();
         // console.log(text);
