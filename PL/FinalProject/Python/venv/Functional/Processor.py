@@ -29,20 +29,11 @@ class Processor:
             text = file.readlines()
 
         #perform task based on grep/wc
-        if grep and not(wc):#complicated grep ex.  "grep this silly.txt | wc"
+        if grep and not(wc):#complicated grep ex.  "grep this silly.txt"
             ans = filter(lambda line: searchString in line, text)#filter
-            print(ans)
+            self.printN(ans);
 
         elif grep and wc:#grep this C:\Users\dgmon\YU\test.txt | wc
-            '''text = filter(lambda line: searchString in line, text)  # filter
-            text = map(lambda line: line.lower(), text)  # lowerCase
-            text = map(lambda line: line.split(), text)  # split1
-            text = reduce(list.__add__, text)  # split2
-            text = map(lambda word: re.sub("[^a-zA-Z]", '', word).strip(), text)  # remove nonLetters
-            ans = filter(lambda word: not (word == ""), text)  # remove nonletters
-            ans = self.count(ans)
-            #text = collections.Counter(text)
-            '''
             self.printNL(
                 self.countWords(
                 filter(lambda word: not (word == ""),
@@ -53,7 +44,6 @@ class Processor:
                 filter(lambda line: searchString in line,text))))))))
 
         elif not(grep) and wc:
-            #ans = filter(lambda word: not(word == ""), map(lambda word: re.sub("[^a-zA-Z]", '', word).strip(), reduce(list.__add__, map(lambda line: line.split(), map(lambda line: line.lower(), text)))))  # remove nonletters
             self.printNL(
                 self.countWords(
                 filter(lambda word: not(word == ""),
@@ -74,6 +64,11 @@ class Processor:
     def printNL(self, ans):
         for line in ans:
             print(line, end="\n")
+
+    def printN(self, ans):
+        for line in ans:
+            print(line, end="")
+        print("", end="\n");
 
 def main():
     args = argv
