@@ -1,6 +1,6 @@
 @echo off
 title FinalProject
-:: notes
+:: as per outr email exchange, my programs parse out non alphabetic characters as well as numbers
 
 
 echo Java Object Oriented:
