@@ -1,7 +1,7 @@
 @echo off
 title FinalProject
 :: as per outr email exchange, my programs parse out non alphabetic characters as well as numbers
-
+:: use "|" with the quotes when doing the grep and wc
 
 echo Java Object Oriented:
 javac  "%CD%\Java\src\OOprogram"\*.java
