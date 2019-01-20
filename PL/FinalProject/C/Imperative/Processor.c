@@ -60,7 +60,7 @@ void process(int argc, char* argv[]) {
         printf("file didn't open\n");
     }
 
-    readFile(fp);
+    buffer = readFile(fp);
 //    printf(buffer);
 //    printf("\n");
     if(grep && !wc){
@@ -89,7 +89,7 @@ void process(int argc, char* argv[]) {
 
 char* readFile(FILE *fp){
     buffer = 0;
-    long length;
+    int length;
     // FILE * f = fopen (filename, "rb");
 
     if (fp)
@@ -97,17 +97,20 @@ char* readFile(FILE *fp){
         fseek (fp, 0, SEEK_END);
         length = ftell(fp);
         fseek (fp, 0, SEEK_SET);
-        buffer = (char*)(malloc (length));
-        buffer[0] = '\0';
-        memset(&buffer[0], 0, sizeof(buffer));
+        buffer = (char*)(calloc(1,length + 1));
+        //buffer = (char*)(malloc(length + 1));
+        //buffer[0] = '\0';
+
+        //memset(&buffer[0], 0, sizeof(buffer));
 
         if (buffer)
         {
-            fread(buffer, length+50, 1, fp);
+            fread(buffer, length, 1, fp);
         }
-        fclose (fp);
     }
-    //strcat(buffer, '\0');
+    buffer[length] = '\0';
+    fclose (fp);
+    //printf("%s\n", buffer);
     return buffer;
 
 }

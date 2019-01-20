@@ -3,16 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e199fdbe-c5b1-463d-b735-91324aeb16d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../C/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../C/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C/Imperative/Processor.c" beforeDir="false" afterPath="$PROJECT_DIR$/../C/Imperative/Processor.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C/Imperative/processor.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../C/Imperative/processor.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C/cmake-build-debug/CMakeFiles/C.dir/Imperative/Processor.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../C/cmake-build-debug/CMakeFiles/C.dir/Imperative/Processor.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C/cmake-build-debug/c.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../C/cmake-build-debug/c.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C/cmake-build-debug/c.exe.stackdump" beforeDir="false" afterPath="$PROJECT_DIR$/../C/cmake-build-debug/c.exe.stackdump" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FinalProject.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalProject.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Functional/Processor.js" beforeDir="false" afterPath="$PROJECT_DIR$/Functional/Processor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Python/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../IndexMinPQ/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../helloIntelij/.idea/compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../helloIntelij/.idea/misc.xml" beforeDir="false" />
@@ -37,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Functional/Processor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="399">
+              <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -239,12 +229,12 @@
       <updated>1545962508196</updated>
       <workItem from="1545962509554" duration="24930000" />
       <workItem from="1546276417594" duration="7972000" />
-      <workItem from="1546401242816" duration="332000" />
+      <workItem from="1546401242816" duration="972000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33234000" />
+    <option name="totallyTimeSpent" value="33874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
@@ -309,8 +299,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Functional/Processor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="399">
+          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
         </state>
       </provider>
     </entry>

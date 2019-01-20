@@ -2,10 +2,6 @@
 title FinalProject
 :: as per outr email exchange, my programs parse out non alphabetic characters as well as numbers
 :: use "|" with the quotes when doing the grep and wc
-<<<<<<< HEAD
-=======
-
->>>>>>> fd469434b324d2eaacffd670130a94a106ec5a6d
 
 echo Java Object Oriented:
 javac  "%CD%\Java\src\OOprogram"\*.java
