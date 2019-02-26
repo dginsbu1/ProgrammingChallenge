@@ -1,0 +1,4 @@
+grade for [DanielGinsburg]: 8.5/10
+
+q2: incorrect transition 0->10, missing 0->11 -1
+q3: -.5, good work but SOA on (1)
