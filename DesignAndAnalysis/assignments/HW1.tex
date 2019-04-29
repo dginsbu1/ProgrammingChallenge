@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+Daniel Ginsburg\\
+\textbf{Problem:} A binary tree is a rooted tree in which each node has at most two
+children. Show by induction that in any binary tree the number of nodes
+with two children is exactly one less than the number of leaves.\\ \\
+Let B(n) represent a binary tree with n nodes.\\
+Let f represent the number of nodes with two children (full nodes).\\
+Let l represent the number of nodes with zero children (leaf nodes).\\
+Let $\operatorname{P}(n)$ be the statement that 
+\begin{equation}
+    For\ B(n),\ f = l - 1
+\end{equation}
+\textbf{Proof:} We will prove P(n) true for all integer $n \geq 1$ \\
+Base Case: $n = 1$. $P(1)$: We have $f = 0$ (no nodes have two children) and $l = 1$ (the single root node). Thus
+\begin{align*}
+    &f = l - 1 \\
+    &0 = 1 - 1 (substitution)\\
+    &0 = 0
+\end{align*}
+Therefore P(1) is true.\\
+\textbf{Inductive step:} Assume that P(k) for some integer $k > 0$. This means that $f_k = l_k - 1$. We now prove that $P(k) \implies P(k+1)$.\\
+We prove this by cases:\\
+Let $c$ represent the node we add (child node).\\
+Let $p$ represent the node we add to (parent node).\\
+Case 1: We add $c$ to a leaf node (no children)\\
+Case 2: We add $c$ to a node with one children\\
+In Case 1: $f_{k+1} = f_k$ because p has only one child so f remains unchanged. Additionally $l_{k+1} = l_k$ because p is no longer a leaf node (it has c as a child) but c is a leaf node (no children) so $l_{k+1} = l_k+1-1 = l_k$. Thus because
+\begin{align*}
+    &f_k = l_k-1\ (inductive\ hypothesis)\\
+    &f_{k+1} = l_{k+1} - 1\ (substitution)\\
+    &P(k+1)\ is\ true 
+\end{align*}
+In Case 2: $f_{k+1} = f_k+1$ because p now has 2 children, and $l_{k+1} = l_k+1$ because c is a leaf node (no children). Thus because
+\begin{align*}
+    &f_k = l_k -1\ (inductive\ hypothesis)\\
+    &f_k + 1 = l_k + 1 (symmetric\ addition)\\
+    &f_{k+1} = l_{k+1} - 1\ (substitution)\\
+    &P(k+1)\ is\ true.
+\end{align*}
+Thus, P(n) holds for n = k + 1, and the proof of the induction step is complete.
+\textbf{Conclusion:} By the principle of induction, P(n) is true for all integer $n \geq 1$.\\
+\end{document}
