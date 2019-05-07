@@ -1,0 +1,4 @@
+grade for [DanielGinsburg]: 8.5/10
+
+q1) weight of maximum value = 20 (not 19)
+grade for [DanielGinsburg]: /10
