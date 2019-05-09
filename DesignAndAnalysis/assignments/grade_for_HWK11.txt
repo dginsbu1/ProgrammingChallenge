@@ -1,0 +1,3 @@
+grade for [DanielGinsburg]: 10/10
+
+OK per last paragraph on Piazza version.  I suggest practicing the classic "greedy is optimal" techniques as well
