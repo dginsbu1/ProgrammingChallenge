@@ -1,0 +1,5 @@
+grade for [DanielGinsburg]: 8/10
+
+q2/q4: -2 I don't see how the path you specified produces the graph
+you've shown for this result, certainly not in one augmenting path
+iteration.  If you can show how you did this, will restore points.
