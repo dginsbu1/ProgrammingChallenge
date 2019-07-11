@@ -35,14 +35,15 @@ public class MatchStickCreator {
 //                System.out.println(EquationCreator.equationToString(equation));
 //                x++;
 //            }
-            String[] equation = EquationCreator.createEquation();
-            writeNuSMV(equation, type);
-            sleep(500);
-            runNuSMV();
-            sleep(500);
-            String[] result = scanNuSMV();
-            int numMoves = setUpVariables();
-            displayResults(result, numMoves);
+                String[] equation = EquationCreator.createEquation();
+                writeNuSMV(equation, type);
+                sleep(250);
+                runNuSMV();
+                sleep(250);
+                String[] result = scanNuSMV();
+                int numMoves = setUpVariables();
+                displayResults(result, numMoves);
+
             boolean correct = false;
             System.out.println("If you need help you can type \"hint\"" +
                     " for a hint or \"help\" for the answer");
@@ -192,13 +193,15 @@ public class MatchStickCreator {
                 " used := -(d.used);\n" +
                 "  add := (used / mini);\n" +
                 "  sub := (used mod mini) / pls;";
+                //"  sub := (ussed mod mini) / pls;";
     }
     //sets the middle part of the NuSMV file based on the type
     private static String setPartTwo(String type) {
         String LTLSPEC = "";
-        if(type.equals("a")) LTLSPEC = "\nLTLSPEC G !(add != 0 & sub = 0); -- adding\n";
-        if(type.equals("s")) LTLSPEC = "\nLTLSPEC G !(sub != 0 & add = 0); -- subtracting\n";
-        if(type.equals("m")) LTLSPEC = "\nLTLSPEC G !(sub != 0 & add = sub);--moving\n";
+        if(type.equals("a")) LTLSPEC = "\nLTLSPEC G !(add != 0 & sub = 0";
+        if(type.equals("s")) LTLSPEC = "\nLTLSPEC G !(sub != 0 & add = 0";
+        if(type.equals("m")) LTLSPEC = "\nLTLSPEC G !(sub != 0 & add = sub";
+        LTLSPEC+= "& !((a.output - b.output = c.output & d.output = \"-\") | (a.output + b.output = c.output & d.output = \"+\")));\n";
         return LTLSPEC;
     }
     //sets the second half the equation (which never changes

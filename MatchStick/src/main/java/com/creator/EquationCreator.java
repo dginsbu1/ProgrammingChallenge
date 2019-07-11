@@ -1,8 +1,8 @@
 package com.creator;
 import sun.awt.Symbol;
 
-import javax.swing.plaf.TableHeaderUI;
-import java.lang.Math;
+//import javax.swing.plaf.TableHeaderUI;
+//import java.lang.Math;
 import java.util.Random;
 
 public class EquationCreator {

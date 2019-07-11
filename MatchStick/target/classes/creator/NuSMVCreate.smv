@@ -1,165 +1,42 @@
 MODULE main
 VAR
-	a : NumMovMatch(6, 0); --mov*21
-	b : NumMovMatch(5, a.used);
-	c : NumMovMatch(1, b.used);
-	d : newSymbol("-", c.used);
+	a : changeNum(2, 0); --mov*21
+	b : changeNum(7, a.used);
+	c : changeNum(9, b.used);
+	d : changeSymbol("+", c.used);
 DEFINE
  mini := 20;
   pls := 1;
  used := -(d.used);
   add := (used / mini);
   sub := (used mod mini) / pls;
-LTLSPEC G !(add != 0 & sub = 0); -- adding
-MODULE newSymbol(symbol, input)
+LTLSPEC G !(add != 0 & sub = 0& !((a.output - b.output = c.output & d.output = "-") | (a.output + b.output = c.output & d.output = "+")));
+MODULE changeSymbol(symbol, input)
 VAR
 	output: {"-", "+"};
 	mini : 20..25;
 	pls : 1..3;
 ASSIGN
-	mini := 20; -- value of each sub
-	pls := 1;  -- value of each add
-	output := case
-			symbol = "+" & input >= mini : {"+","-"};
-			symbol = "-" & input > 0 & input < mini : {"+","-"};
-			TRUE : symbol;
-			esac;
+	mini   := 20; -- value of each sub
+	pls    := 1;  -- value of each add
 DEFINE
-	remaining := case
+	used := case
 		symbol = "+" & output = "-" : input - mini;
 		symbol = "-" & output = "+" : input - pls;
 		TRUE 						: input;
 		esac;
-	plus := (output = "+");
 -------------------------------------------------------
-MODULE NumMovMatch(number, input) --input is 20*sub + 1*add
+MODULE changeNum(number, input) --input is 20*sub + 1*add
 VAR
 	output: {0,1,2,3,4,5,6,7,8,9};
 
 DEFINE
 	mini:= 20; -- value of each sub
 	pls := 1;  -- value of each add
-	add := (input mod mini) / pls;
-	sub := (input / mini);
 ASSIGN
-	output := case
-		number = 0 & sub >= 1 & add >= 1 : {0,6,9};		   	TRUE : number; esac union case
-		number = 0 & sub >= 2 & add >= 1 : {0,6,9,2,3,5};  	TRUE : number; esac union case
-        number = 0 & sub >= 3 & add >= 1 : {0,6,9,2,3,5,4};	TRUE : number; esac union case
-
-		number = 1 & sub >= 1 & add >= 4 : {1,2,5};			TRUE : number; esac union case
-		number = 1 & sub >=1 & add >= 5	 : {1,2,5,6};		TRUE : number; esac union case
-
-		number = 2 & sub >= 1 & add >= 1 : {2,3};			TRUE : number; esac union case
-		number = 2 & sub >= 1 & add >= 2 : {2,3,0,6,9}; 	TRUE : number; esac union case
-		number = 2 & sub >= 2 & add >= 2 : {2,3,0,6,9,5};	TRUE : number; esac union case
-		number = 2 & sub >= 3 & add >= 1 : {7};				TRUE : number; esac union case
-		number = 2 & sub >= 3 & add >= 2 : {7,4};			TRUE : number; esac union case
-		number = 2 & sub >= 4 & add >= 1 : {1};				TRUE : number; esac union case
-
-		number = 3 & sub >= 0 & add >= 1 : {3};				TRUE : number; esac union case
-		number = 3 & sub >= 1 & add >= 1 : {3,2,5};			TRUE : number; esac union case
-		number = 3 & sub >= 2 & add >= 1 : {4};				TRUE : number; esac union case
-		number = 3 & sub >= 1 & add >= 2 : {3,2,5,0,6};		TRUE : number; esac union case
-
-		number = 4 & sub >= 1 & add >= 2 : {4,3,5};			TRUE : number; esac union case
-		number = 4 & sub >= 1 & add >= 3 : {4,3,5,0,6};		TRUE : number; esac union case
-		number = 4 & sub >= 2 & add >= 1 : {7};				TRUE : number; esac union case
-		number = 4 & sub >= 2 & add >= 3 : {2};				TRUE : number; esac union case
-
-		number = 5 & sub >= 1 & add >= 1 : {3};				TRUE : number; esac union case
-		number = 5 & sub >= 1 & add >= 2 : {3,0};			TRUE : number; esac union case
-		number = 5 & sub >= 2 & add >= 1 : {4};				TRUE : number; esac union case
-		number = 5 & sub >= 2 & add >= 2 : {4,2};			TRUE : number; esac union case
-		number = 5 & sub >= 3 & add >= 1 : {7};				TRUE : number; esac union case
-		number = 5 & sub >= 4 & add >= 1 : {1};				TRUE : number; esac union case
-
-		number = 6 & sub >= 1 & add >= 1 : {0,9};			TRUE : number; esac union case
-		number = 6 & sub >= 2 & add >= 1 : {0,9,2,3};		TRUE : number; esac union case
-		number = 6 & sub >= 3 & add >= 1 : {0,9,2,3,4};		TRUE : number; esac union case
-		number = 6 & sub >= 4 & add >= 1 : {0,9,2,3,4,7};	TRUE : number; esac union case
-		number = 6 & sub >= 5 & add >= 1 : {0,9,2,3,4,7,1};	TRUE : number; esac union case
-
-		number = 7 & sub >= 1 & add >= 2 : {4};				TRUE : number; esac union case
-		number = 7 & sub >= 1 & add >= 3 : {4,2,5};			TRUE : number; esac union case
-		number = 7 & sub >= 1 & add >= 4 : {4,2,5,6};		TRUE : number; esac union case
-		--NOTHING FOR 8
-		number = 9 & sub >= 1 & add >= 1 : {0,6};			TRUE : number; esac union case
-		number = 9 & sub >= 2 & add >= 1 : {0,6,2};			TRUE : number; esac union case
-		--just adding--------------
-		number = 0 & add = 0  : {0};
-		number = 0 & add >= 1 : {0,8};
-		number = 1 & add = 0  : {1};
-		number = 1 & add = 1  : {1,7};
-		number = 1 & add = 2  : {1,7,4};
-		number = 1 & add = 3  : {1,7,4,3,9};
-		number = 1 & add = 4  : {1,7,4,3,9,0};
-		number = 1 & add >= 5 : {1,7,4,3,9,0,8};
-		number = 2 & add = 0  : {2};
-		number = 2 & add = 1  : {2};
-		number = 2 & add >= 2 : {2,8};
-		number = 3 & add = 0  : {3};
-		number = 3 & add = 1  : {3,9};
-		number = 3 & add >= 2 : {3,9,8};
-		number = 4 & add = 0  : {4};
-		number = 4 & add = 1  : {4};
-		number = 4 & add = 2  : {4,9};
-		number = 4 & add >= 3 : {4,9,8};
-		number = 5 & add = 0  : {5};
-		number = 5 & add = 1  : {5,6,9};
-		number = 5 & add >= 2 : {5,6,9,8};
-		number = 6 & add = 0  : {6};
-		number = 6 & add >= 1 : {6,8};
-		number = 7 & add = 0  : {7};
-		number = 7 & add = 1  : {7};
-		number = 7 & add = 2  : {7,3};
-		number = 7 & add = 3  : {7,3,0,9};
-		number = 7 & add >= 4 : {7,3,0,9,8};
-		number = 8 & add >= 0 : {8};
-		number = 9 & add = 0  : {9};
-		number = 9 & add >= 1 : {9,8};
-		TRUE: number;
-		esac union case
-		--just sutraction----------------------------------------------
-		number = 0 & sub = 0 : {0};
-		number = 0 & sub = 1 : {0};
-		number = 0 & sub = 2 : {0};
-		number = 0 & sub = 3 : {0,7};
-		number = 0 & sub >= 4: {0,7,1};
-		number = 1 & sub >= 0: {1};
-		number = 2 & sub >= 0: {2};
-		number = 3 & sub = 0 : {3};
-		number = 3 & sub = 1 : {3};
-		number = 3 & sub = 2 : {3,7};
-		number = 3 & sub >= 2: {3,7,1};
-		number = 4 & sub = 0 : {4};
-		number = 4 & sub = 1 : {4};
-		number = 4 & sub > 1 : {4,1};
-		number = 5 & sub >= 0: {5};
-		number = 6 & sub = 0 : {6};
-		number = 6 & sub > 0 : {6,5};
-		number = 7 & sub = 0 : {7};
-		number = 7 & sub > 0 : {7,1};
-		number = 8 & sub = 0 : {8};
-		number = 8 & sub = 1 : {8,0,6,9};
-		number = 8 & sub = 2 : {8,0,6,9,2,3,5};
-		number = 8 & sub = 3 : {8,0,6,9,2,3,5,4};
-		number = 8 & sub = 4 : {8,0,6,9,2,3,5,4,7};
-		number = 8 & sub = 5 : {8,0,6,9,2,3,5,4,7,1};
-		number = 8 & sub > 5 : {8,0,6,9,2,3,5,4,7,1};
-		number = 9 & sub = 0 : {9};
-		number = 9 & sub = 1 : {9,3,5};
-		number = 9 & sub = 2 : {9,3,5,4};
-		number = 9 & sub = 3 : {9,3,5,4,7};
-		number = 9 & sub > 3 : {9,3,5,4,7,1};
-		TRUE: number;
-		esac union case
-		TRUE				 : number;
-		esac;
-
-
+	output := {0,1,2,3,4,5,6,7,8,9};
 DEFINE
-	remaining := case
+	used := case
 		number = 0 & (output = 6) :  input - (1*mini) - (1*pls);
 		number = 0 & (output = 9) :  input - (1*mini) - (1*pls);
 		number = 0 & (output = 2) :  input - (2*mini) - (1*pls);
