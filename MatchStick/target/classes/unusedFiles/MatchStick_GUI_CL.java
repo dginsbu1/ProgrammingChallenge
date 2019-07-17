@@ -1,8 +1,7 @@
 package com.commandLine;//import javax.xml.soap.SAAJMetaFactory;
 
-import javax.swing.*;
-import javax.swing.plaf.FontUIResource;
-import java.awt.*;
+import commandLine.MatchStickSolver.MatchStick;
+
 import java.io.*;
 import java.nio.file.*;
 import java.util.Scanner;

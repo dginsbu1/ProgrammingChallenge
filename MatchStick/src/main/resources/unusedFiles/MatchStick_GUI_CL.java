@@ -1,8 +1,7 @@
-package com.commandLine;//import javax.xml.soap.SAAJMetaFactory;
+//package com.commandLine;//import javax.xml.soap.SAAJMetaFactory;
+/*package unusedFiles;
+import commandLine.MatchStickSolver.MatchStick;
 
-import javax.swing.*;
-import javax.swing.plaf.FontUIResource;
-import java.awt.*;
 import java.io.*;
 import java.nio.file.*;
 import java.util.Scanner;
@@ -22,7 +21,7 @@ public class MatchStickGC {
     static char sam;//Subtract, Add, Move;
     static int moveNum;
     //for writing NuSMVFile
-    tatic String partOne, partTwo, partThree, partFour;
+    static String partOne, partTwo, partThree, partFour;
     //for extracting answers
     static int ansA, ansB, ansC;
     static char ansSym = '*';
@@ -37,7 +36,7 @@ public class MatchStickGC {
     //for displaying solutions
     static SolutionDisplay displayer;
     */
-
+/*
     //creates a matchstick object and solves the problem from either input or file
     public static void main(String[] args) throws IOException, InterruptedException {
         MatchStick matchStick = new MatchStick();
@@ -125,7 +124,7 @@ public class MatchStickGC {
     }
 
     */
-
+/*
     //reads a file to get the last section of the NuSMV file that will be written
     private void setNuSMVSections() throws IOException {
         Path path = Paths.get(NuSMVFilePathRead);
@@ -169,7 +168,7 @@ public class MatchStickGC {
         System.out.println("please type in the type of moves s (subtraction) "+
                 "a (addition), or m (move) followed by the number allowed (ex. a3 = add three)");
         equation = in.nextLine().trim();
-        */
+
         equation = equation.replace(" ","");//remove spaces
         sam = equation.charAt(0);
         moveNum = Character.getNumericValue(equation.charAt(1));
@@ -197,7 +196,7 @@ public class MatchStickGC {
         Path path = Paths.get(NuSMVFilePathRead);
         partFour = new String(Files.readAllBytes(Paths.get(NuSMVFilePathRead)));
     }
-
+/*
     //writes a NuSMV file based on the user input
     public void writeNuSMV() throws IOException, InterruptedException {
         //partOne and partFour never change

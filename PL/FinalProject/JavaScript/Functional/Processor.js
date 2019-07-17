@@ -39,6 +39,7 @@ class Processor{
 
         //
         let lines = text.split(/\n+/);
+        //printMe(lines);
         //perform task based on grep/wc structure
         if(grep && !wc){ //basic grep ex. "grep this silly.txt"
             let ans = lines.filter(line => line.includes(searchString));

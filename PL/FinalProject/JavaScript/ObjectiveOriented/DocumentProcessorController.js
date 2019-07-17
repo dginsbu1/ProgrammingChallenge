@@ -48,6 +48,7 @@ class DocumentProcessorController{
                 this.builder.setWordCounter(new UniqueWordCounter());
                 this.wc = true;
             }
+            //else{console.log("just grep \n");}
         } else {
             this.path = args[3];
             this.wc = true;

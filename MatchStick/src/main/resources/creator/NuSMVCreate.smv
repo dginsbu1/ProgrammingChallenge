@@ -1,16 +1,16 @@
 MODULE main
 VAR
-	a : changeNum(1, 0); --mov*21
-	b : changeNum(8, a.used);
-	c : changeNum(9, b.used);
-	d : changeSymbol("+", c.used);
+	a : changeNum(2, 0); --mov*21
+	b : changeNum(0, a.used);
+	c : changeNum(2, b.used);
+	d : changeSymbol("-", c.used);
 DEFINE
  mini := 20;
   pls := 1;
  used := -(d.used);
   add := (used / mini);
   sub := (used mod mini) / pls;
-LTLSPEC G !(add != 0 & sub = 0& !((a.output - b.output = c.output & d.output = "-") | (a.output + b.output = c.output & d.output = "+")));
+LTLSPEC G !(sub != 0 & add = 0& !((a.output - b.output = c.output & d.output = "-") | (a.output + b.output = c.output & d.output = "+")));
 MODULE changeSymbol(symbol, input)
 VAR
 	output: {"-", "+"};
