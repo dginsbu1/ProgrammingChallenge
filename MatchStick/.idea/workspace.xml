@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab2d86c3-f734-4d48-b72b-9aa7a706f36d" name="Default" comment="">
+    <list default="true" id="ab2d86c3-f734-4d48-b72b-9aa7a706f36d" name="Default" comment="update_1.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MatchStick/NuSMVFileWrite.smv" afterPath="$PROJECT_DIR$/src/main/resources/MatchStick/NuSMVFileWrite.smv" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MatchStick/NuSMVFileWriteAuto.smv" afterPath="$PROJECT_DIR$/src/main/resources/MatchStick/NuSMVFileWriteAuto.smv" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MatchStick/results.txt" afterPath="$PROJECT_DIR$/src/main/resources/MatchStick/results.txt" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MatchStick/resultsAuto.txt" afterPath="$PROJECT_DIR$/src/main/resources/MatchStick/resultsAuto.txt" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/creator/CreateResults.txt" afterPath="$PROJECT_DIR$/src/main/resources/creator/CreateResults.txt" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/creator/NuSMVCreate.smv" afterPath="$PROJECT_DIR$/src/main/resources/creator/NuSMVCreate.smv" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -308,95 +302,6 @@
               <item name="MatchStick" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MatchStick" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MatchStick" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MatchStick" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MatchStick" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commandLine" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MatchStick" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MatchStick" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commandLine" type="462c0819:PsiDirectoryNode" />
-              <item name="creator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MatchStick" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MatchStick" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MatchStick" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MatchStick" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="creator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MatchStick" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MatchStick" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="MatchStickSolver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MatchStick" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MatchStick" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MatchStick" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MatchStick" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="creator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MatchStick" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MatchStick" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="MatchStick" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MatchStick" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MatchStick" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="MatchstickNumbers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MatchStick" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MatchStick" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="unusedFiles" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -700,7 +605,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563352938917</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update_1.0">
+      <created>1563353189734</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1563353189734</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -796,12 +708,6 @@
           <line>42</line>
           <properties />
           <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/commandLine/MatchStickSolver/TestN.java</url>
-          <line>8</line>
-          <properties />
-          <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/GUI/SolutionDisplay.java</url>
