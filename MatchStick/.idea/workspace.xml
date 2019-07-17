@@ -2,66 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab2d86c3-f734-4d48-b72b-9aa7a706f36d" name="Default" comment="update_1.0">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/../BusinessCardApplication/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../BusinessCardApplication/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../DesignAndAnalysis/assignments/HW14-Nap.docx" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../DesignAndAnalysis/assignments/HW4.docx" afterPath="$PROJECT_DIR$/../DesignAndAnalysis/assignments/HW4.docx" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/MatchStickSolver/MatchStick.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/SolutionDisplay.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/creator/MatchStickCreator.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/examples/Apples.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/examples/DisplayPanel.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/examples/LabelDemo.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/examples/OptionPaneExample.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/commandLine/MatchStickSolver/MatchStick.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/commandLine/MatchStickSolver/Test.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/commandLine/MatchStickSolver/TestN.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/commandLine/creator/EquationCreator.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/commandLine/creator/MatchStickCreator.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/MatchStick/NuSMVFileWriteAuto.smv" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/MatchStick/resultsAuto.txt" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/GUI/MatchStick.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/GUI/SolutionDisplay.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/GUI/examples/Apples.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/GUI/examples/DisplayPanel.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/GUI/examples/LabelDemo.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/GUI/examples/OptionPaneExample.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/commandLine/MatchStick.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/commandLine/Test.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/creator/EquationCreator.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/creator/MatchStickCreator.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MatchStick/NuSMVFileWrite.smv" afterPath="$PROJECT_DIR$/src/main/resources/MatchStick/NuSMVFileWrite.smv" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MatchStick/results.txt" afterPath="$PROJECT_DIR$/src/main/resources/MatchStick/results.txt" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MatchstickNumbers/4.png" afterPath="$PROJECT_DIR$/src/main/resources/MatchstickNumbers/4.png" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/creator/CreateResults.txt" afterPath="$PROJECT_DIR$/src/main/resources/creator/CreateResults.txt" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/creator/NuSMVCreate.smv" afterPath="$PROJECT_DIR$/src/main/resources/creator/NuSMVCreate.smv" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/unusedFiles/MatchStick_GUI_CL.java" afterPath="$PROJECT_DIR$/src/main/resources/unusedFiles/MatchStick_GUI_CL.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MatchStick/NuSMVFileWrite.smv" afterPath="$PROJECT_DIR$/target/classes/MatchStick/NuSMVFileWrite.smv" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MatchStick/results.txt" afterPath="$PROJECT_DIR$/target/classes/MatchStick/results.txt" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MatchstickNumbers/4.png" afterPath="$PROJECT_DIR$/target/classes/MatchstickNumbers/4.png" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/GUI/MatchStick.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/GUI/SolutionDisplay.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/GUI/examples/Apples$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/GUI/examples/Apples.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/GUI/examples/DisplayPanel.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/GUI/examples/LabelDemo.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/GUI/examples/OptionPaneExample.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/commandLine/MatchStick.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/commandLine/Test.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/creator/EquationCreator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/creator/MatchStickCreator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/creator/CreateResults.txt" afterPath="$PROJECT_DIR$/target/classes/creator/CreateResults.txt" />
-      <change beforePath="$PROJECT_DIR$/target/classes/creator/NuSMVCreate.smv" afterPath="$PROJECT_DIR$/target/classes/creator/NuSMVCreate.smv" />
-      <change beforePath="$PROJECT_DIR$/target/classes/unusedFiles/MatchStick_GUI_CL.java" afterPath="$PROJECT_DIR$/target/classes/unusedFiles/MatchStick_GUI_CL.java" />
-      <change beforePath="$PROJECT_DIR$/../PL/FinalProject/.idea/FinalProject.iml" afterPath="$PROJECT_DIR$/../PL/FinalProject/.idea/FinalProject.iml" />
-      <change beforePath="$PROJECT_DIR$/../PL/FinalProject/.idea/misc.xml" afterPath="$PROJECT_DIR$/../PL/FinalProject/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/../PL/FinalProject/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../PL/FinalProject/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../PL/FinalProject/C/Imperative/processor.exe" afterPath="$PROJECT_DIR$/../PL/FinalProject/C/Imperative/processor.exe" />
-      <change beforePath="$PROJECT_DIR$/../PL/FinalProject/JavaScript/.idea/misc.xml" afterPath="$PROJECT_DIR$/../PL/FinalProject/JavaScript/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/../PL/FinalProject/JavaScript/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../PL/FinalProject/JavaScript/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../PL/FinalProject/JavaScript/Functional/Processor.js" afterPath="$PROJECT_DIR$/../PL/FinalProject/JavaScript/Functional/Processor.js" />
-      <change beforePath="$PROJECT_DIR$/../PL/FinalProject/JavaScript/ObjectiveOriented/DD.js" afterPath="$PROJECT_DIR$/../PL/FinalProject/JavaScript/ObjectiveOriented/DD.js" />
-      <change beforePath="$PROJECT_DIR$/../PL/FinalProject/JavaScript/ObjectiveOriented/DocumentProcessorController.js" afterPath="$PROJECT_DIR$/../PL/FinalProject/JavaScript/ObjectiveOriented/DocumentProcessorController.js" />
-      <change beforePath="$PROJECT_DIR$/../PL/FinalProject/JavaScript/ObjectiveOriented/LineFilter.js" afterPath="$PROJECT_DIR$/../PL/FinalProject/JavaScript/ObjectiveOriented/LineFilter.js" />
-      <change beforePath="$PROJECT_DIR$/../PL/FinalProject/JavaScript/ObjectiveOriented/Splitter.js" afterPath="$PROJECT_DIR$/../PL/FinalProject/JavaScript/ObjectiveOriented/Splitter.js" />
-      <change beforePath="$PROJECT_DIR$/../PL/FinalProject/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/../PL/FinalProject/cmake-build-debug/CMakeFiles/Makefile.cmake" />
-      <change beforePath="$PROJECT_DIR$/../PL/IndexMinPQ/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../PL/helloIntelij/.idea/compiler.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../PL/helloIntelij/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../PL/helloIntelij/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../PL/helloIntelij/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../PL/helloIntelij/helloIntelij.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../PL/helloIntelij/pom.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../PL/helloIntelij/src/main/java/Main/intelij.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../PL/helloIntelij/target/classes/Main/intelij.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../README.md" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -97,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MatchStick_GUI_CL.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/unusedFiles/MatchStick_GUI_CL.java">
+      <file leaf-file-name="EquationCreator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/commandLine/creator/EquationCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7310">
-              <caret line="170" column="8" lean-forward="true" selection-start-line="170" selection-start-column="8" selection-end-line="170" selection-end-column="8" />
+            <state relative-caret-position="1272">
+              <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -339,15 +294,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="commandLine" type="462c0819:PsiDirectoryNode" />
               <item name="creator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MatchStick" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MatchStick" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commandLine" type="462c0819:PsiDirectoryNode" />
-              <item name="MatchStickSolver" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MatchStick" type="b2602c69:ProjectViewProjectNode" />
@@ -679,6 +625,14 @@
       <option name="presentableId" value="Default" />
       <updated>1561968168347</updated>
     </task>
+    <task id="LOCAL-00001" summary="update_1.0">
+      <created>1563352756499</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1563352756499</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -692,11 +646,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-14" y="0" width="3172" height="2074" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993776" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32398397" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32398397" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -707,7 +660,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293718" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25312707" sideWeight="0.49511173" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25312707" sideWeight="0.49511173" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985553" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1072,14 +1025,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/commandLine/creator/EquationCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="865">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/creator/CreateResults.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1122,6 +1067,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/unusedFiles/MatchStick_GUI_CL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7310">
+          <caret line="170" column="0" lean-forward="true" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/commandLine/MatchStickSolver/MatchStick.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1132,10 +1085,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/unusedFiles/MatchStick_GUI_CL.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/commandLine/creator/EquationCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7310">
-          <caret line="170" column="8" lean-forward="true" selection-start-line="170" selection-start-column="8" selection-end-line="170" selection-end-column="8" />
+        <state relative-caret-position="1272">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding />
         </state>
       </provider>
