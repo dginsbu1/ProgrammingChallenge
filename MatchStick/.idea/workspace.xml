@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab2d86c3-f734-4d48-b72b-9aa7a706f36d" name="Default" comment="update_1.0">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/MatchStickSolver/MatchStick.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/SolutionDisplay.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/creator/MatchStickCreator.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/examples/Apples.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/examples/DisplayPanel.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/examples/LabelDemo.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GUI/examples/OptionPaneExample.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/commandLine/MatchStickSolver/MatchStick.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/commandLine/MatchStickSolver/Test.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/commandLine/MatchStickSolver/TestN.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/commandLine/creator/EquationCreator.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/commandLine/creator/MatchStickCreator.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/MatchStick/NuSMVFileWriteAuto.smv" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/MatchStick/resultsAuto.txt" />
+    <list default="true" id="ab2d86c3-f734-4d48-b72b-9aa7a706f36d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -632,7 +618,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563352756499</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update_1.0">
+      <created>1563352832864</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1563352832864</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
